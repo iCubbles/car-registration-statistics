@@ -1,0 +1,375 @@
+{
+    "name": "car-registration-statistics",
+    "groupId": "com.incowia.examples",
+    "version": "0.1.0-SNAPSHOT",
+    "modelVersion": "8.3.0",
+    "docType": "webpackage",
+    "author": {
+        "name": "Judit Ross",
+        "email": "judit.ross@incowia.com"
+    },
+    "license": "MIT",
+    "keywords": [],
+    "man": [],
+    "artifacts": {
+        "apps": [],
+        "elementaryComponents": [
+            {
+                "artifactId": "state-car-registration-data",
+                "description": "This is an elementary-component based on Polymer.",
+                "runnables": [
+                    {
+                        "name": "demo",
+                        "path": "/demo/index.html",
+                        "description": "Demo app..."
+                    }
+                ],
+                "endpoints": [
+                    {
+                        "endpointId": "main",
+                        "description": "This is recommended for you use with webcomponents.",
+                        "resources": [
+                            "state-car-registration-data.html"
+                        ],
+                        "dependencies": [
+                            "cubx.core.rte@1.5.0/cubxpolymer/main",
+                            "bootstrap-3.3.5@1.0.3/bootstrap/html-import",
+                            "bootstrap-toogle-2.2.1@0.1.0-SNAPSHOT/bootstrap-toggle/html-import"
+                        ]
+                    }
+                ],
+                "slots": [
+                    {
+                        "slotId": "data",
+                        "type": "object",
+                        "direction": [
+                            "input",
+                            "output"
+                        ]
+                    },
+                    {
+                        "slotId": "displayname",
+                        "type": "string",
+                        "direction": [
+                            "input"
+                        ],
+                        "value": "placeholder"
+                    }
+                ]
+            },
+            {
+                "artifactId": "dragable-maker",
+                "description": "This is an elementary-component based on Polymer.",
+                "runnables": [
+                    {
+                        "name": "demo",
+                        "path": "/demo/index.html",
+                        "description": "Demo app..."
+                    }
+                ],
+                "endpoints": [
+                    {
+                        "endpointId": "main",
+                        "description": "This is recommended for you use with webcomponents.",
+                        "resources": [
+                            "dragable-maker.html"
+                        ],
+                        "dependencies": [
+                            "cubx.core.rte@1.5.0/cubxpolymer/main"
+                        ]
+                    }
+                ],
+                "slots": [
+                    {
+                        "slotId": "dragableElement",
+                        "type": "string",
+                        "direction": [
+                            "input"
+                        ]
+                    }
+                ]
+            }
+        ],
+        "compoundComponents": [
+            {
+                "artifactId": "state-car-registration-statistics-frame",
+                "description": "This is a cubbles-compound-component.",
+                "runnables": [
+                    {
+                        "name": "demo",
+                        "path": "/demo/index.html",
+                        "description": "Demo app..."
+                    }
+                ],
+                "endpoints": [
+                    {
+                        "endpointId": "main",
+                        "resources": [
+                            "css/state-car-registration-statistics-frame.css",
+                            "js/style.js"
+                        ],
+                        "dependencies": [
+                            "this/state-car-registration-data-dragable/main"
+                        ]
+                    }
+                ],
+                "slots": [],
+                "members": [
+                    {
+                        "memberId": "schleswigHolstein",
+                        "componentId": "this/state-car-registration-data-dragable",
+                        "displayName": "Schleswig-Holstein"
+                    },
+                    {
+                        "memberId": "hamburg",
+                        "componentId": "this/state-car-registration-data-dragable",
+                        "displayName": "Hamburg"
+                    },
+                    {
+                        "memberId": "niedersachsen",
+                        "componentId": "this/state-car-registration-data-dragable",
+                        "displayName": "Niedersachsen"
+                    },
+                    {
+                        "memberId": "bremen",
+                        "componentId": "this/state-car-registration-data-dragable",
+                        "displayName": "Bremen"
+                    },
+                    {
+                        "memberId": "nordrheinWestfalen",
+                        "componentId": "this/state-car-registration-data-dragable",
+                        "displayName": "Nordrhein-Westfalen"
+                    },
+                    {
+                        "memberId": "hessen",
+                        "componentId": "this/state-car-registration-data-dragable",
+                        "displayName": "Hessen"
+                    },
+                    {
+                        "memberId": "rheinlandPfalz",
+                        "componentId": "this/state-car-registration-data-dragable",
+                        "displayName": "Rheinland-Pfalz"
+                    },
+                    {
+                        "memberId": "badenWuerttemberg",
+                        "componentId": "this/state-car-registration-data-dragable",
+                        "displayName": "Baden-Württemberg"
+                    },
+                    {
+                        "memberId": "bayern",
+                        "componentId": "this/state-car-registration-data-dragable",
+                        "displayName": "Bayern"
+                    },
+                    {
+                        "memberId": "saarland",
+                        "componentId": "this/state-car-registration-data-dragable",
+                        "displayName": "Saarland"
+                    },
+                    {
+                        "memberId": "berlin",
+                        "componentId": "this/state-car-registration-data-dragable",
+                        "displayName": "Berlin"
+                    },
+                    {
+                        "memberId": "brandenburg",
+                        "componentId": "this/state-car-registration-data-dragable",
+                        "displayName": "Brandenburg"
+                    },
+                    {
+                        "memberId": "mecklenburgVorpommern",
+                        "componentId": "this/state-car-registration-data-dragable",
+                        "displayName": "Mecklenburg-Vorpommern"
+                    },
+                    {
+                        "memberId": "sachsen",
+                        "componentId": "this/state-car-registration-data-dragable",
+                        "displayName": "Sachsen"
+                    },
+                    {
+                        "memberId": "sachsenAnhalt",
+                        "componentId": "this/state-car-registration-data-dragable",
+                        "displayName": "Sachsen-Anhalt"
+                    },
+                    {
+                        "memberId": "thueringen",
+                        "componentId": "this/state-car-registration-data-dragable",
+                        "displayName": "Thüringen"
+                    }
+                ],
+                "connections": [],
+                "inits": [
+                    {
+                        "memberIdRef": "schleswigHolstein",
+                        "slot": "displayname",
+                        "value": "Schleswig-Holstein"
+                    },
+                    {
+                        "memberIdRef": "hamburg",
+                        "slot": "displayname",
+                        "value": "Hamburg"
+                    },
+                    {
+                        "memberIdRef": "niedersachsen",
+                        "slot": "displayname",
+                        "value": "Niedersachsen"
+                    },
+                    {
+                        "memberIdRef": "bremen",
+                        "slot": "displayname",
+                        "value": "Bremen"
+                    },
+                    {
+                        "memberIdRef": "nordrheinWestfalen",
+                        "slot": "displayname",
+                        "value": "Nordrhein-Westfalen"
+                    },
+                    {
+                        "memberIdRef": "hessen",
+                        "slot": "displayname",
+                        "value": "Hessen"
+                    },
+                    {
+                        "memberIdRef": "rheinlandPfalz",
+                        "slot": "displayname",
+                        "value": "Rheinland-Pfalz"
+                    },
+                    {
+                        "memberIdRef": "badenWuerttemberg",
+                        "slot": "displayname",
+                        "value": "Baden-Württemberg"
+                    },
+                    {
+                        "memberIdRef": "bayern",
+                        "slot": "displayname",
+                        "value": "Bayern"
+                    },
+                    {
+                        "memberIdRef": "saarland",
+                        "slot": "displayname",
+                        "value": "Saarland"
+                    },
+                    {
+                        "memberIdRef": "brandenburg",
+                        "slot": "displayname",
+                        "value": "Brandenburg"
+                    },
+                    {
+                        "memberIdRef": "berlin",
+                        "slot": "displayname",
+                        "value": "Berlin"
+                    },
+                    {
+                        "memberIdRef": "mecklenburgVorpommern",
+                        "slot": "displayname",
+                        "value": "Mecklenburg-Vorpommern"
+                    },
+                    {
+                        "memberIdRef": "sachsen",
+                        "slot": "displayname",
+                        "value": "Sachsen"
+                    },
+                    {
+                        "memberIdRef": "sachsenAnhalt",
+                        "slot": "displayname",
+                        "value": "Sachsen-Anhalt"
+                    },
+                    {
+                        "memberIdRef": "thueringen",
+                        "slot": "displayname",
+                        "value": "Thüringen"
+                    }
+                ]
+            },
+            {
+                "artifactId": "state-car-registration-data-dragable",
+                "description": "This is a cubbles-compound-component.",
+                "runnables": [
+                    {
+                        "name": "demo",
+                        "path": "/demo/index.html",
+                        "description": "Demo app..."
+                    }
+                ],
+                "endpoints": [
+                    {
+                        "endpointId": "main",
+                        "resources": [
+                            "css/state-car-registration-data-dragable.css"
+                        ],
+                        "dependencies": [
+                            "this/state-car-registration-data/main",
+                            "this/dragable-maker/main"
+                        ]
+                    }
+                ],
+                "slots": [
+                    {
+                        "slotId": "data",
+                        "type": "object",
+                        "direction": [
+                            "input",
+                            "output"
+                        ]
+                    },
+                    {
+                        "slotId": "displayname",
+                        "type": "string",
+                        "direction": [
+                            "input"
+                        ]
+                    }
+                ],
+                "members": [
+                    {
+                        "memberId": "dragableMaker",
+                        "componentId": "this/dragable-maker"
+                    },
+                    {
+                        "memberId": "data",
+                        "componentId": "this/state-car-registration-data"
+                    }
+                ],
+                "connections": [
+                    {
+                        "connectionId": "dataIn",
+                        "source": {
+                            "slot": "data"
+                        },
+                        "destination": {
+                            "memberIdRef": "data",
+                            "slot": "data"
+                        }
+                    },
+                    {
+                        "connectionId": "dataOut",
+                        "source": {
+                            "memberIdRef": "data",
+                            "slot": "data"
+                        },
+                        "destination": {
+                            "slot": "data"
+                        }
+                    },
+                    {
+                        "connectionId": "displayname",
+                        "source": {
+                            "slot": "displayname"
+                        },
+                        "destination": {
+                            "memberIdRef": "data",
+                            "slot": "displayname"
+                        }
+                    }
+                ],
+                "inits": [
+                    {
+                        "memberIdRef":"dragableMaker",
+                        "slot": "dragableElement",
+                        "value": "state-car-registration-data .state"
+                    }
+                ]
+            }
+        ],
+        "utilities": []
+    }
+}
