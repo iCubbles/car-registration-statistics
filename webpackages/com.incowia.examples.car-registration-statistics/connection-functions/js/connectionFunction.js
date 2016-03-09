@@ -2,9 +2,9 @@
 'use strict';
 
 window.car_registration_statistic = {
-    convertDataForBarChart: function(value, next) {
+    convertDataForChart: function(value, next) {
         var datasetList = [];
-        var ordered = window.car_registration_statistic.last5YearsSortedhelper(value);
+        var ordered = window.car_registration_statistic.last5YearsSortedLimitedhelper(value);
 
         var datasetTotal = ['total'];
         var datasetPassengerCar = ['passanger cars'];
@@ -25,23 +25,38 @@ window.car_registration_statistic = {
         datasetList.push(datasetTrucks);
         datasetList.push(datasetTractors);
         datasetList.push(datasetMotorcycles);
-        console.log('convertDataForBarChart',datasetList);
         next(datasetList);
     },
-    convertDataForBarChartLabels: function(value, next) {
-        var ordered = window.car_registration_statistic.last5YearsSortedhelper(value);
+    convertDataForChartLabels: function(value, next) {
+        var ordered = window.car_registration_statistic.last5YearsSortedLimitedhelper(value);
         var labels = [];
         ordered.forEach(function(item) {
             labels.push(item.date.substr(item.date.lastIndexOf('.') + 1));
         });
-        console.log('convertDataForBarChartLabels', labels);
         next(labels);
     },
-    last5YearsSortedhelper: function(value) {
+
+    convertDataForPieChart: function(value, next) {
+        var datasetList = [];
+        var ordered = window.car_registration_statistic.last5YearsSortedLimitedhelper(value);
+
+        ordered.forEach(function(item) {
+            var dataset = [];
+            dataset.push(item.date.substr(item.date.lastIndexOf('.') + 1));
+            dataset.push(item.total);
+
+            datasetList.push(dataset);
+
+        });
+
+        next(datasetList);
+    },
+    last5YearsSortedLimitedhelper: function(value) {
         var limit = new Date(2010, 11, 31);
         var filtered = _.filter(value, function(item) {
             var dateStrArray = item.date.split('.');
-            return new Date(Number(dateStrArray[2]), Number(dateStrArray[1] - 1), Number(dateStrArray[0])).getTime() >
+            return new Date(Number(dateStrArray[2]), Number(dateStrArray[1] - 1), Number(
+                    dateStrArray[0])).getTime() >
                 limit.getTime();
         });
         var ordered = _.sortByOrder(filtered, [
@@ -50,7 +65,6 @@ window.car_registration_statistic = {
                 return new Date(Number(dateStrArray[2]), Number(dateStrArray[1] - 1), Number(
                     dateStrArray[0])).getTime();
             }], ['desc']);
-        console.log('last5YearsSortedhelper ordered', ordered);
         return ordered;
     }
 

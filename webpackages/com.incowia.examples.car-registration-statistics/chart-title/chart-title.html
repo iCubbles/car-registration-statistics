@@ -1,0 +1,20 @@
+<link rel="import" href="chart-title-style.html">
+<dom-module id="chart-title">
+
+    <template>
+        <style include="main-style"></style>
+        <style include="chart-title-style"></style>
+        <h1 class="bg-primary title">{{model.chartTitle}}</h1>
+        <template is="dom-if" if="{{model.connectedWith}}">
+        <div class="connected bg-info">
+            <div class="status">
+            <span><b>connected with:</b> {{model.connectedWith}}</span>
+            </div>
+            <button class="pull-right btn btn-primary" on-click="removeHandler">disassociate</button>
+        </div>
+        </template>
+
+    </template>
+
+    <script src="chart-title.js"></script>
+</dom-module>

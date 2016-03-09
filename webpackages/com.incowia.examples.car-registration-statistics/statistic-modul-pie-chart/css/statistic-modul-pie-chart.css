@@ -6,7 +6,7 @@
     background-color:#f2f2f2;
 
 }
-statistic-modul-bar-chart {
+statistic-modul-pie-chart {
     display:block;
     border: solid thin #bfbfbf;
     background-color: #f2f2f2;
@@ -14,11 +14,7 @@ statistic-modul-bar-chart {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     border-radius: 18px;
-    margin: 0.5em 0;
 }
-bar-chart {
+pie-chart {
     margin: 1em 0.3em 0.3em 0.3em;
 }
-
-
-

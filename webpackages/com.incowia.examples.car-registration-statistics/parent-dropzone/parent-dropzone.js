@@ -1,3 +1,4 @@
+/*globals elementFindByAttributeValue*/
 (function() {
     'use strict';
     /**
@@ -41,17 +42,16 @@
 
         },
 
-        createConnection: function(source,target) {
-            console.log('createConnection -> source', source);
-            console.log('createConnection -> target', target);
+        createConnection: function(source, target, def) {
             var dynamicConnection = new window.cubx.cif.DynamicConnection();
             dynamicConnection.setSourceRuntimeId(source.getAttribute('runtime-id'));
-            dynamicConnection.setSourceSlot('data');
+            dynamicConnection.setSourceSlot(def.source);
             dynamicConnection.setDestinationRuntimeId(target.getAttribute('runtime-id'));
-            dynamicConnection.setDestinationSlot('data');
+            dynamicConnection.setDestinationSlot(def.destination);
+            dynamicConnection.setRepeatedValues(true);
             dynamicConnection.setDirectExecution(true);
             var connectionId = source.addDynamicConnection(dynamicConnection);
-            target.connectedWithId = connectionId;
+            target[def.name] = connectionId;
         },
 
         makeToDropzoneToParentCompound: function(parentElem, elem) {
@@ -74,7 +74,6 @@
                 return false;
             };
             parentElem.handleDragLeave = function(e) {
-                console.log('---------dynamic-connection-compound:dragleave', e.target);
                 if (e.target === parentElem) {
                     if (parentElem.classList.contains('layer_over')) {
                         parentElem.classList.remove('layer_over');
@@ -83,7 +82,6 @@
                 }
             };
             parentElem.handleDragEnd = function(e) {
-                console.log('xxxxxxxxxxxxdynamic-connection-compound:dragend', e.target);
 
                 if (parentElem.classList.contains('layer_over')) {
                     parentElem.classList.remove('layer_over');
@@ -92,14 +90,11 @@
 
             };
             parentElem.handleDrop = function(e) {
-                console.log('############drop in compound');
                 if (e.stopPropagation) {
                     e.stopPropagation(); // stops the browser from redirecting.
                     var runtimeId = e.dataTransfer.getData('runtimeId');
                     var me = e.target;
-                    console.log('handleDrop:me', me);
 
-                    console.log('handleDrop -> runtimeId', runtimeId);
                     var draggedEl = elementFindByAttributeValue('runtime-id', runtimeId);
                     // console.log('me.contains(draggedEl)', me.contains(draggedEl));
                     //console.log('host',host);
@@ -108,14 +103,32 @@
                     while (childElem !== me.firstElementChild && childElem.tagName !== draggedEl.tagName) {
                         childElem = childElem.previousElementSibling;
                     }
-                    console.log('childElem', childElem);
-                    if(parentElem.connectedWithId){
-                        // TODO remove
+                    parentElem.removeConnections();
+                    var defs = elem.getConnectionDef();
+                    if (typeof defs === 'object' && defs instanceof Array) {
+                        defs.forEach(function(item) {
+                            elem.createConnection(draggedEl, parentElem, item);
+                        });
                     }
-                    elem.createConnection(draggedEl,parentElem);
 
                 }
                 return false;
+            };
+            parentElem.removeConnections = function() {
+                var defs = elem.getConnectionDef();
+                if (typeof defs === 'object' && defs instanceof Array) {
+                    defs.forEach(function(item) {
+                        if (parentElem[item.name]) {
+                            parentElem.removeDynamicConnection(parentElem[item.name]);
+                            delete parentElem[item.name];
+                        }
+                    });
+                }
+
+                if (parentElem.stateSlotConnectedWithId) {
+                    parentElem.removeDynamicConnection(parentElem.stateSlotConnectedWithId);
+                    delete parentElem.stateSlotConnectedWithId;
+                }
             };
             parentElem.addEventListener('dragenter', parentElem.handleDragEnter);
             parentElem.addEventListener('dragover', parentElem.handleDragOver);

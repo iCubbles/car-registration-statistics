@@ -110,7 +110,63 @@
                         ]
                     }
                 ],
-                "slots": []
+                "slots": [
+                    {
+                        "slotId": "connectionDef",
+                        "type": "array",
+                        "direction": [
+                            "input"
+                        ]
+                    }
+                ]
+            },
+            {
+                "artifactId": "chart-title",
+                "description": "This is an elementary-component based on Polymer.",
+                "runnables": [
+                    {
+                        "name": "demo",
+                        "path": "/demo/index.html",
+                        "description": "Demo app..."
+                    }
+                ],
+                "endpoints": [
+                    {
+                        "endpointId": "main",
+                        "description": "This is recommended for you use with webcomponents.",
+                        "resources": [
+                            "chart-title.html"
+                        ],
+                        "dependencies": [
+                            "cubx.core.rte@1.5.0/cubxpolymer/main",
+                            "bootstrap-3.3.5@1.0.3/bootstrap/html-import"
+                        ]
+                    }
+                ],
+                "slots": [
+                    {
+                        "slotId": "chartTitle",
+                        "type": "string",
+                        "direction": [
+                            "input"
+                        ],
+                        "value": "placeholder"
+                    },
+                    {
+                        "slotId": "connectedWith",
+                        "type": "string",
+                        "direction": [
+                            "input"
+                        ]
+                    },
+                    {
+                        "slotId": "clearData",
+                        "type": "array",
+                        "direction": [
+                            "output"
+                        ]
+                    }
+                ]
             }
         ],
         "compoundComponents": [
@@ -132,8 +188,12 @@
                             "js/style.js"
                         ],
                         "dependencies": [
+                            "lodash-3.10.1@1.0.1/lodash/html-import",
                             "this/state-car-registration-data-draggable/main",
-                            "this/statistic-modul-bar-chart/main"
+                            "this/statistic-modul-bar-chart/main",
+                            "this/statistic-modul-line-chart/main",
+                            "this/statistic-modul-step-chart/main",
+                            "this/statistic-modul-pie-chart/main"
                         ]
                     }
                 ],
@@ -142,6 +202,18 @@
                     {
                         "componentId": "this/statistic-modul-bar-chart",
                         "memberId": "statisticModulBarChar"
+                    },
+                    {
+                        "componentId": "this/statistic-modul-step-chart",
+                        "memberId": "statisticModulStepChar"
+                    },
+                    {
+                        "componentId": "this/statistic-modul-line-chart",
+                        "memberId": "statisticModulLineChar"
+                    },
+                    {
+                        "componentId": "this/statistic-modul-pie-chart",
+                        "memberId": "statisticModulPieChar"
                     },
                     {
                         "memberId": "schleswigHolstein",
@@ -3639,7 +3711,8 @@
                         "slotId": "displayname",
                         "type": "string",
                         "direction": [
-                            "input"
+                            "input",
+                            "output"
                         ]
                     }
                 ],
@@ -3675,12 +3748,22 @@
                         }
                     },
                     {
-                        "connectionId": "displayname",
+                        "connectionId": "displaynameIn",
                         "source": {
                             "slot": "displayname"
                         },
                         "destination": {
                             "memberIdRef": "data",
+                            "slot": "displayname"
+                        }
+                    },
+                    {
+                        "connectionId": "displaynameOut",
+                        "source": {
+                            "memberIdRef": "data",
+                            "slot": "displayname"
+                        },
+                        "destination": {
                             "slot": "displayname"
                         }
                     }
@@ -3710,6 +3793,7 @@
                             "css/statistic-modul-bar-chart.css"
                         ],
                         "dependencies": [
+                            "this/chart-title/main",
                             "com.incowia.lib.chart-library@0.1.0-SNAPSHOT/bar-chart/main",
                             "this/parent-dropzone/main",
                             "this/connection-functions/main"
@@ -3723,9 +3807,21 @@
                         "direction": [
                             "input"
                         ]
+                    },
+                    {
+                        "slotId": "source",
+                        "type": "object",
+                        "direction": [
+                            "input",
+                            "output"
+                        ]
                     }
                 ],
                 "members": [
+                    {
+                        "memberId": "chartTitle",
+                        "componentId": "this/chart-title"
+                    },
                     {
                         "memberId": "parentDropzone",
                         "componentId": "this/parent-dropzone"
@@ -3745,7 +3841,8 @@
                             "memberIdRef": "barChart",
                             "slot": "dataColumns"
                         },
-                        "hookFunction": "car_registration_statistic.convertDataForBarChart"
+                        "hookFunction": "car_registration_statistic.convertDataForChart",
+                        "repeatedValues": true
                     },
                     {
                         "connectionId": "chartLabel",
@@ -3756,10 +3853,464 @@
                             "memberIdRef": "barChart",
                             "slot": "xLabels"
                         },
-                        "hookFunction": "car_registration_statistic.convertDataForBarChartLabels"
+                        "hookFunction": "car_registration_statistic.convertDataForChartLabels",
+                        "repeatedValues": true
+                    },
+                    {
+                        "connectionId": "connectedWith",
+                        "source": {
+                            "slot": "source"
+                        },
+                        "destination": {
+                            "memberIdRef": "chartTitle",
+                            "slot": "connectedWith"
+                        },
+                        "repeatedValues": true
+                    },
+                    {
+                        "connectionId": "clearDataColumns",
+                        "source": {
+                            "memberIdRef": "chartTitle",
+                            "slot": "clearData"
+                        },
+                        "destination": {
+                            "memberIdRef": "barChart",
+                            "slot": "dataColumns"
+                        },
+                        "repeatedValues": true
+                    },
+                    {
+                        "connectionId": "clearDataLabel",
+                        "source": {
+                            "memberIdRef": "chartTitle",
+                            "slot": "clearData"
+                        },
+                        "destination": {
+                            "memberIdRef": "barChart",
+                            "slot": "xLabels"
+                        },
+                        "repeatedValues": true
                     }
                 ],
-                "inits": []
+                "inits": [
+                    {
+                        "memberIdRef": "chartTitle",
+                        "slot": "chartTitle",
+                        "value": "Bar Chart"
+                    },
+                    {
+                        "memberIdRef": "parentDropzone",
+                        "slot": "connectionDef",
+                        "value": [
+                            {
+                                "name": "dataSlotConnected",
+                                "source": "data",
+                                "destination": "data"
+                            },
+                            {
+                                "name": "stateSlotConnected",
+                                "source": "displayname",
+                                "destination": "source"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "artifactId": "statistic-modul-line-chart",
+                "description": "This is a cubbles-compound-component.",
+                "runnables": [
+                    {
+                        "name": "demo",
+                        "path": "/demo/index.html",
+                        "description": "Demo app..."
+                    }
+                ],
+                "endpoints": [
+                    {
+                        "endpointId": "main",
+                        "resources": [
+                            "css/statistic-modul-line-chart.css"
+                        ],
+                        "dependencies": [
+                            "this/chart-title/main",
+                            "com.incowia.lib.chart-library@0.1.0-SNAPSHOT/line-chart/main",
+                            "this/parent-dropzone/main",
+                            "this/connection-functions/main"
+                        ]
+                    }
+                ],
+                "slots": [
+                    {
+                        "slotId": "data",
+                        "type": "object",
+                        "direction": [
+                            "input"
+                        ]
+                    },
+                    {
+                        "slotId": "source",
+                        "type": "object",
+                        "direction": [
+                            "input",
+                            "output"
+                        ]
+                    }
+                ],
+                "members": [
+                    {
+                        "memberId": "chartTitle",
+                        "componentId": "this/chart-title"
+                    },
+                    {
+                        "memberId": "parentDropzone",
+                        "componentId": "this/parent-dropzone"
+                    },
+                    {
+                        "memberId": "lineChart",
+                        "componentId": "com.incowia.lib.chart-library@0.1.0-SNAPSHOT/line-chart"
+                    }
+                ],
+                "connections": [
+                    {
+                        "connectionId": "chartData",
+                        "source": {
+                            "slot": "data"
+                        },
+                        "destination": {
+                            "memberIdRef": "lineChart",
+                            "slot": "dataColumns"
+                        },
+                        "hookFunction": "car_registration_statistic.convertDataForChart",
+                        "repeatedValues": true
+                    },
+                    {
+                        "connectionId": "chartLabel",
+                        "source": {
+                            "slot": "data"
+                        },
+                        "destination": {
+                            "memberIdRef": "lineChart",
+                            "slot": "xLabels"
+                        },
+                        "hookFunction": "car_registration_statistic.convertDataForChartLabels",
+                        "repeatedValues": true
+                    },
+                    {
+                        "connectionId": "connectedWith",
+                        "source": {
+                            "slot": "source"
+                        },
+                        "destination": {
+                            "memberIdRef": "chartTitle",
+                            "slot": "connectedWith"
+                        },
+                        "repeatedValues": true
+                    },
+                    {
+                        "connectionId": "clearDataColumns",
+                        "source": {
+                            "memberIdRef": "chartTitle",
+                            "slot": "clearData"
+                        },
+                        "destination": {
+                            "memberIdRef": "lineChart",
+                            "slot": "dataColumns"
+                        },
+                        "repeatedValues": true
+                    },
+                    {
+                        "connectionId": "clearDataLabel",
+                        "source": {
+                            "memberIdRef": "chartTitle",
+                            "slot": "clearData"
+                        },
+                        "destination": {
+                            "memberIdRef": "lineChart",
+                            "slot": "xLabels"
+                        },
+                        "repeatedValues": true
+                    }
+                ],
+                "inits": [
+                    {
+                        "memberIdRef": "chartTitle",
+                        "slot": "chartTitle",
+                        "value": "Line Chart"
+                    },
+                    {
+                        "memberIdRef": "parentDropzone",
+                        "slot": "connectionDef",
+                        "value": [
+                            {
+                                "name": "dataSlotConnected",
+                                "source": "data",
+                                "destination": "data"
+                            },
+                            {
+                                "name": "stateSlotConnected",
+                                "source": "displayname",
+                                "destination": "source"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "artifactId": "statistic-modul-step-chart",
+                "description": "This is a cubbles-compound-component.",
+                "runnables": [
+                    {
+                        "name": "demo",
+                        "path": "/demo/index.html",
+                        "description": "Demo app..."
+                    }
+                ],
+                "endpoints": [
+                    {
+                        "endpointId": "main",
+                        "resources": [
+                            "css/statistic-modul-step-chart.css"
+                        ],
+                        "dependencies": [
+                            "this/chart-title/main",
+                            "com.incowia.lib.chart-library@0.1.0-SNAPSHOT/step-chart/main",
+                            "this/parent-dropzone/main",
+                            "this/connection-functions/main"
+                        ]
+                    }
+                ],
+                "slots": [
+                    {
+                        "slotId": "data",
+                        "type": "object",
+                        "direction": [
+                            "input"
+                        ]
+                    },
+                    {
+                        "slotId": "source",
+                        "type": "object",
+                        "direction": [
+                            "input",
+                            "output"
+                        ]
+                    }
+                ],
+                "members": [
+                    {
+                        "memberId": "chartTitle",
+                        "componentId": "this/chart-title"
+                    },
+                    {
+                        "memberId": "parentDropzone",
+                        "componentId": "this/parent-dropzone"
+                    },
+                    {
+                        "memberId": "stepChart",
+                        "componentId": "com.incowia.lib.chart-library@0.1.0-SNAPSHOT/step-chart"
+                    }
+                ],
+                "connections": [
+                    {
+                        "connectionId": "chartData",
+                        "source": {
+                            "slot": "data"
+                        },
+                        "destination": {
+                            "memberIdRef": "stepChart",
+                            "slot": "dataColumns"
+                        },
+                        "hookFunction": "car_registration_statistic.convertDataForChart",
+                        "repeatedValues": true
+                    },
+                    {
+                        "connectionId": "chartLabel",
+                        "source": {
+                            "slot": "data"
+                        },
+                        "destination": {
+                            "memberIdRef": "stepChart",
+                            "slot": "xLabels"
+                        },
+                        "hookFunction": "car_registration_statistic.convertDataForChartLabels",
+                        "repeatedValues": true
+                    },
+                    {
+                        "connectionId": "connectedWith",
+                        "source": {
+                            "slot": "source"
+                        },
+                        "destination": {
+                            "memberIdRef": "chartTitle",
+                            "slot": "connectedWith"
+                        },
+                        "repeatedValues": true
+                    },
+                    {
+                        "connectionId": "clearDataColumns",
+                        "source": {
+                            "memberIdRef": "chartTitle",
+                            "slot": "clearData"
+                        },
+                        "destination": {
+                            "memberIdRef": "stepChart",
+                            "slot": "dataColumns"
+                        },
+                        "repeatedValues": true
+                    },
+                    {
+                        "connectionId": "clearDataLabel",
+                        "source": {
+                            "memberIdRef": "chartTitle",
+                            "slot": "clearData"
+                        },
+                        "destination": {
+                            "memberIdRef": "stepChart",
+                            "slot": "xLabels"
+                        },
+                        "repeatedValues": true
+                    }
+                ],
+                "inits": [
+                    {
+                        "memberIdRef": "chartTitle",
+                        "slot": "chartTitle",
+                        "value": "Step Chart"
+                    },
+                    {
+                        "memberIdRef": "parentDropzone",
+                        "slot": "connectionDef",
+                        "value": [
+                            {
+                                "name": "dataSlotConnected",
+                                "source": "data",
+                                "destination": "data"
+                            },
+                            {
+                                "name": "stateSlotConnected",
+                                "source": "displayname",
+                                "destination": "source"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "artifactId": "statistic-modul-pie-chart",
+                "description": "This is a cubbles-compound-component.",
+                "runnables": [
+                    {
+                        "name": "demo",
+                        "path": "/demo/index.html",
+                        "description": "Demo app..."
+                    }
+                ],
+                "endpoints": [
+                    {
+                        "endpointId": "main",
+                        "resources": [
+                            "css/statistic-modul-pie-chart.css"
+                        ],
+                        "dependencies": [
+                            "this/chart-title/main",
+                            "com.incowia.lib.chart-library@0.1.0-SNAPSHOT/pie-chart/main",
+                            "this/parent-dropzone/main",
+                            "this/connection-functions/main"
+                        ]
+                    }
+                ],
+                "slots": [
+                    {
+                        "slotId": "data",
+                        "type": "object",
+                        "direction": [
+                            "input"
+                        ]
+                    },
+                    {
+                        "slotId": "source",
+                        "type": "object",
+                        "direction": [
+                            "input",
+                            "output"
+                        ]
+                    }
+                ],
+                "members": [
+                    {
+                        "memberId": "chartTitle",
+                        "componentId": "this/chart-title"
+                    },
+                    {
+                        "memberId": "parentDropzone",
+                        "componentId": "this/parent-dropzone"
+                    },
+                    {
+                        "memberId": "pieChart",
+                        "componentId": "com.incowia.lib.chart-library@0.1.0-SNAPSHOT/pie-chart"
+                    }
+                ],
+                "connections": [
+                    {
+                        "connectionId": "chartData",
+                        "source": {
+                            "slot": "data"
+                        },
+                        "destination": {
+                            "memberIdRef": "pieChart",
+                            "slot": "dataColumns"
+                        },
+                        "hookFunction": "car_registration_statistic.convertDataForPieChart",
+                        "repeatedValues": true
+                    },
+                    {
+                        "connectionId": "connectedWith",
+                        "source": {
+                            "slot": "source"
+                        },
+                        "destination": {
+                            "memberIdRef": "chartTitle",
+                            "slot": "connectedWith"
+                        },
+                        "repeatedValues": true
+                    },
+                    {
+                        "connectionId": "clearDataColumns",
+                        "source": {
+                            "memberIdRef": "chartTitle",
+                            "slot": "clearData"
+                        },
+                        "destination": {
+                            "memberIdRef": "pieChart",
+                            "slot": "dataColumns"
+                        },
+                        "repeatedValues": true
+                    }
+                ],
+                "inits": [
+                    {
+                        "memberIdRef": "chartTitle",
+                        "slot": "chartTitle",
+                        "value": "Pie Chart"
+                    },
+                    {
+                        "memberIdRef": "parentDropzone",
+                        "slot": "connectionDef",
+                        "value": [
+                            {
+                                "name": "dataSlotConnected",
+                                "source": "data",
+                                "destination": "data"
+                            },
+                            {
+                                "name": "stateSlotConnected",
+                                "source": "displayname",
+                                "destination": "source"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "utilities": [
