@@ -32,9 +32,8 @@
                             "state-car-registration-data.html"
                         ],
                         "dependencies": [
-                            "cubx.core.rte@1.5.0/cubxpolymer/main",
-                            "bootstrap-3.3.5@1.0.3/bootstrap/html-import",
-                            "bootstrap-toogle-2.2.1@0.1.0-SNAPSHOT/bootstrap-toggle/html-import"
+                            "cubx.core.rte@1.6.0-SNAPSHOT/cubxpolymer/main",
+                            "bootstrap-3.3.5@1.0.3/bootstrap/html-import"
                         ]
                     }
                 ],
@@ -58,7 +57,7 @@
                 ]
             },
             {
-                "artifactId": "dragable-maker",
+                "artifactId": "draggable-maker",
                 "description": "This is an elementary-component based on Polymer.",
                 "runnables": [
                     {
@@ -72,22 +71,46 @@
                         "endpointId": "main",
                         "description": "This is recommended for you use with webcomponents.",
                         "resources": [
-                            "dragable-maker.html"
+                            "draggable-maker.html"
                         ],
                         "dependencies": [
-                            "cubx.core.rte@1.5.0/cubxpolymer/main"
+                            "cubx.core.rte@1.6.0-SNAPSHOT/cubxpolymer/main"
                         ]
                     }
                 ],
                 "slots": [
                     {
-                        "slotId": "dragableElement",
+                        "slotId": "draggableElement",
                         "type": "string",
                         "direction": [
                             "input"
                         ]
                     }
                 ]
+            },
+            {
+                "artifactId": "parent-dropzone",
+                "description": "This is an elementary-component based on Polymer.",
+                "runnables": [
+                    {
+                        "name": "demo",
+                        "path": "/demo/index.html",
+                        "description": "Demo app..."
+                    }
+                ],
+                "endpoints": [
+                    {
+                        "endpointId": "main",
+                        "description": "This is recommended for you use with webcomponents.",
+                        "resources": [
+                            "parent-dropzone.html"
+                        ],
+                        "dependencies": [
+                            "cubx.core.rte@1.6.0-SNAPSHOT/cubxpolymer/main"
+                        ]
+                    }
+                ],
+                "slots": []
             }
         ],
         "compoundComponents": [
@@ -109,90 +132,95 @@
                             "js/style.js"
                         ],
                         "dependencies": [
-                            "this/state-car-registration-data-dragable/main"
+                            "this/state-car-registration-data-draggable/main",
+                            "this/statistic-modul-bar-chart/main"
                         ]
                     }
                 ],
                 "slots": [],
                 "members": [
                     {
+                        "componentId": "this/statistic-modul-bar-chart",
+                        "memberId": "statisticModulBarChar"
+                    },
+                    {
                         "memberId": "schleswigHolstein",
-                        "componentId": "this/state-car-registration-data-dragable",
+                        "componentId": "this/state-car-registration-data-draggable",
                         "displayName": "Schleswig-Holstein"
                     },
                     {
                         "memberId": "hamburg",
-                        "componentId": "this/state-car-registration-data-dragable",
+                        "componentId": "this/state-car-registration-data-draggable",
                         "displayName": "Hamburg"
                     },
                     {
                         "memberId": "niedersachsen",
-                        "componentId": "this/state-car-registration-data-dragable",
+                        "componentId": "this/state-car-registration-data-draggable",
                         "displayName": "Niedersachsen"
                     },
                     {
                         "memberId": "bremen",
-                        "componentId": "this/state-car-registration-data-dragable",
+                        "componentId": "this/state-car-registration-data-draggable",
                         "displayName": "Bremen"
                     },
                     {
                         "memberId": "nordrheinWestfalen",
-                        "componentId": "this/state-car-registration-data-dragable",
+                        "componentId": "this/state-car-registration-data-draggable",
                         "displayName": "Nordrhein-Westfalen"
                     },
                     {
                         "memberId": "hessen",
-                        "componentId": "this/state-car-registration-data-dragable",
+                        "componentId": "this/state-car-registration-data-draggable",
                         "displayName": "Hessen"
                     },
                     {
                         "memberId": "rheinlandPfalz",
-                        "componentId": "this/state-car-registration-data-dragable",
+                        "componentId": "this/state-car-registration-data-draggable",
                         "displayName": "Rheinland-Pfalz"
                     },
                     {
                         "memberId": "badenWuerttemberg",
-                        "componentId": "this/state-car-registration-data-dragable",
+                        "componentId": "this/state-car-registration-data-draggable",
                         "displayName": "Baden-Württemberg"
                     },
                     {
                         "memberId": "bayern",
-                        "componentId": "this/state-car-registration-data-dragable",
+                        "componentId": "this/state-car-registration-data-draggable",
                         "displayName": "Bayern"
                     },
                     {
                         "memberId": "saarland",
-                        "componentId": "this/state-car-registration-data-dragable",
+                        "componentId": "this/state-car-registration-data-draggable",
                         "displayName": "Saarland"
                     },
                     {
                         "memberId": "berlin",
-                        "componentId": "this/state-car-registration-data-dragable",
+                        "componentId": "this/state-car-registration-data-draggable",
                         "displayName": "Berlin"
                     },
                     {
                         "memberId": "brandenburg",
-                        "componentId": "this/state-car-registration-data-dragable",
+                        "componentId": "this/state-car-registration-data-draggable",
                         "displayName": "Brandenburg"
                     },
                     {
                         "memberId": "mecklenburgVorpommern",
-                        "componentId": "this/state-car-registration-data-dragable",
+                        "componentId": "this/state-car-registration-data-draggable",
                         "displayName": "Mecklenburg-Vorpommern"
                     },
                     {
                         "memberId": "sachsen",
-                        "componentId": "this/state-car-registration-data-dragable",
+                        "componentId": "this/state-car-registration-data-draggable",
                         "displayName": "Sachsen"
                     },
                     {
                         "memberId": "sachsenAnhalt",
-                        "componentId": "this/state-car-registration-data-dragable",
+                        "componentId": "this/state-car-registration-data-draggable",
                         "displayName": "Sachsen-Anhalt"
                     },
                     {
                         "memberId": "thueringen",
-                        "componentId": "this/state-car-registration-data-dragable",
+                        "componentId": "this/state-car-registration-data-draggable",
                         "displayName": "Thüringen"
                     }
                 ],
@@ -204,9 +232,421 @@
                         "value": "Schleswig-Holstein"
                     },
                     {
+                        "memberIdRef": "schleswigHolstein",
+                        "slot": "data",
+                        "value": [
+                            {
+                                "date": "01.01.2015",
+                                "stateId": 1,
+                                "state": "Schleswig-Holstein",
+                                "total": 1887417,
+                                "passenger-cars": 1555863,
+                                "trucks": 102657,
+                                "tractors": 74016,
+                                "motorcycles": 140661
+                            },
+                            {
+                                "date": "01.01.2014",
+                                "stateId": 1,
+                                "state": "Schleswig-Holstein",
+                                "total": 1860410,
+                                "passenger-cars": 1534917,
+                                "trucks": 99876,
+                                "tractors": 73309,
+                                "motorcycles": 138265
+                            },
+                            {
+                                "date": "01.01.2013",
+                                "stateId": 1,
+                                "state": "Schleswig-Holstein",
+                                "total": 1839039,
+                                "passenger-cars": 1517779,
+                                "trucks": 97955,
+                                "tractors": 72626,
+                                "motorcycles": 136835
+                            },
+                            {
+                                "date": "01.01.2012",
+                                "stateId": 1,
+                                "state": "Schleswig-Holstein",
+                                "total": 1816170,
+                                "passenger-cars": 1499358,
+                                "trucks": 95850,
+                                "tractors": 71950,
+                                "motorcycles": 135229
+                            },
+                            {
+                                "date": "01.01.2011",
+                                "stateId": 1,
+                                "state": "Schleswig-Holstein",
+                                "total": 1786603,
+                                "passenger-cars": 1476405,
+                                "trucks": 92490,
+                                "tractors": 70947,
+                                "motorcycles": 133371
+                            },
+                            {
+                                "date": "01.01.2010",
+                                "stateId": 1,
+                                "state": "Schleswig-Holstein",
+                                "total": 1756915,
+                                "passenger-cars": 1452553,
+                                "trucks": 89744,
+                                "tractors": 70361,
+                                "motorcycles": 131261
+                            },
+                            {
+                                "date": "01.01.2009",
+                                "stateId": 1,
+                                "state": "Schleswig-Holstein",
+                                "total": 1730303,
+                                "passenger-cars": 1432290,
+                                "trucks": 87784,
+                                "tractors": 70157,
+                                "motorcycles": 127441
+                            },
+                            {
+                                "date": "01.01.2008",
+                                "stateId": 1,
+                                "state": "Schleswig-Holstein",
+                                "total": 1720034,
+                                "passenger-cars": 1427095,
+                                "trucks": 86469,
+                                "tractors": 69559,
+                                "motorcycles": 124540
+                            },
+                            {
+                                "date": "01.01.2007",
+                                "stateId": 1,
+                                "state": "Schleswig-Holstein",
+                                "total": 1941625,
+                                "passenger-cars": 1620182,
+                                "trucks": 95306,
+                                "tractors": 73387,
+                                "motorcycles": 139510
+                            },
+                            {
+                                "date": "01.01.2006",
+                                "stateId": 1,
+                                "state": "Schleswig-Holstein",
+                                "total": 1922894,
+                                "passenger-cars": 1606540,
+                                "trucks": 93939,
+                                "tractors": 72363,
+                                "motorcycles": 136876
+                            },
+                            {
+                                "date": "01.01.2005",
+                                "stateId": 1,
+                                "state": "Schleswig-Holstein",
+                                "total": 1906324,
+                                "passenger-cars": 1568781,
+                                "trucks": 94026,
+                                "tractors": 71812,
+                                "motorcycles": 134510
+                            },
+                            {
+                                "date": "01.01.2004",
+                                "stateId": 1,
+                                "state": "Schleswig-Holstein",
+                                "total": 1886816,
+                                "passenger-cars": 1552152,
+                                "trucks": 94580,
+                                "tractors": 71460,
+                                "motorcycles": 132183
+                            },
+                            {
+                                "date": "01.01.2003",
+                                "stateId": 1,
+                                "state": "Schleswig-Holstein",
+                                "total": 1870492,
+                                "passenger-cars": 1538893,
+                                "trucks": 95230,
+                                "tractors": 71628,
+                                "motorcycles": 129230
+                            },
+                            {
+                                "date": "01.01.2002",
+                                "stateId": 1,
+                                "state": "Schleswig-Holstein",
+                                "total": 1859272,
+                                "passenger-cars": 1531853,
+                                "trucks": 95524,
+                                "tractors": 71622,
+                                "motorcycles": 125437
+                            },
+                            {
+                                "date": "01.01.2001",
+                                "stateId": 1,
+                                "state": "Schleswig-Holstein",
+                                "total": 1826972,
+                                "passenger-cars": 1507812,
+                                "trucks": 93186,
+                                "tractors": 71525,
+                                "motorcycles": 120415
+                            },
+                            {
+                                "date": "01.01.2000",
+                                "stateId": 1,
+                                "state": "Schleswig-Holstein",
+                                "total": 1764890,
+                                "passenger-cars": 1461713,
+                                "trucks": 88046,
+                                "tractors": 70170,
+                                "motorcycles": 112118
+                            },
+                            {
+                                "date": "01.01.1999",
+                                "stateId": 1,
+                                "state": "Schleswig-Holstein",
+                                "total": 1735239,
+                                "passenger-cars": 1443006,
+                                "trucks": 85183,
+                                "tractors": 69931,
+                                "motorcycles": 104878
+                            },
+                            {
+                                "date": "01.01.1998",
+                                "stateId": 1,
+                                "state": "Schleswig-Holstein",
+                                "total": 1710989,
+                                "passenger-cars": 1431868,
+                                "trucks": 81740,
+                                "tractors": 69921,
+                                "motorcycles": 96009
+                            },
+                            {
+                                "date": "01.01.1997",
+                                "stateId": 1,
+                                "state": "Schleswig-Holstein",
+                                "total": 1683873,
+                                "passenger-cars": 1419432,
+                                "trucks": 76158,
+                                "tractors": 70140,
+                                "motorcycles": 87370
+                            },
+                            {
+                                "date": "01.01.1996",
+                                "stateId": 1,
+                                "state": "Schleswig-Holstein",
+                                "total": 1652323,
+                                "passenger-cars": 1398533,
+                                "trucks": 74036,
+                                "tractors": 70692,
+                                "motorcycles": 79079
+                            }
+                        ]
+                    },
+                    {
                         "memberIdRef": "hamburg",
                         "slot": "displayname",
                         "value": "Hamburg"
+                    },
+                    {
+                        "memberIdRef": "hamburg",
+                        "slot": "data",
+                        "value": [
+                            {
+                                "date": "01.01.2015",
+                                "stateId": 2,
+                                "state": "Hamburg",
+                                "total": 865967,
+                                "passenger-cars": 750510,
+                                "trucks": 50243,
+                                "tractors": 6950,
+                                "motorcycles": 52128
+                            },
+                            {
+                                "date": "01.01.2014",
+                                "stateId": 2,
+                                "state": "Hamburg",
+                                "total": 856031,
+                                "passenger-cars": 742320,
+                                "trucks": 49373,
+                                "tractors": 6830,
+                                "motorcycles": 51465
+                            },
+                            {
+                                "date": "01.01.2013",
+                                "stateId": 2,
+                                "state": "Hamburg",
+                                "total": 850335,
+                                "passenger-cars": 738610,
+                                "trucks": 48254,
+                                "tractors": 6658,
+                                "motorcycles": 50769
+                            },
+                            {
+                                "date": "01.01.2012",
+                                "stateId": 2,
+                                "state": "Hamburg",
+                                "total": 841862,
+                                "passenger-cars": 731283,
+                                "trucks": 48226,
+                                "tractors": 6602,
+                                "motorcycles": 49843
+                            },
+                            {
+                                "date": "01.01.2011",
+                                "stateId": 2,
+                                "state": "Hamburg",
+                                "total": 834906,
+                                "passenger-cars": 725845,
+                                "trucks": 47464,
+                                "tractors": 6568,
+                                "motorcycles": 49051
+                            },
+                            {
+                                "date": "01.01.2010",
+                                "stateId": 2,
+                                "state": "Hamburg",
+                                "total": 823381,
+                                "passenger-cars": 715480,
+                                "trucks": 47073,
+                                "tractors": 6384,
+                                "motorcycles": 48448
+                            },
+                            {
+                                "date": "01.01.2009",
+                                "stateId": 2,
+                                "state": "Hamburg",
+                                "total": 818189,
+                                "passenger-cars": 711450,
+                                "trucks": 47626,
+                                "tractors": 6516,
+                                "motorcycles": 46651
+                            },
+                            {
+                                "date": "01.01.2008",
+                                "stateId": 2,
+                                "state": "Hamburg",
+                                "total": 817691,
+                                "passenger-cars": 712833,
+                                "trucks": 47397,
+                                "tractors": 6427,
+                                "motorcycles": 45039
+                            },
+                            {
+                                "date": "01.01.2007",
+                                "stateId": 2,
+                                "state": "Hamburg",
+                                "total": 956009,
+                                "passenger-cars": 840049,
+                                "trucks": 52797,
+                                "tractors": 6953,
+                                "motorcycles": 49482
+                            },
+                            {
+                                "date": "01.01.2006",
+                                "stateId": 2,
+                                "state": "Hamburg",
+                                "total": 959687,
+                                "passenger-cars": 844253,
+                                "trucks": 53277,
+                                "tractors": 6731,
+                                "motorcycles": 48746
+                            },
+                            {
+                                "date": "01.01.2005",
+                                "stateId": 2,
+                                "state": "Hamburg",
+                                "total": 961043,
+                                "passenger-cars": 835828,
+                                "trucks": 54296,
+                                "tractors": 6569,
+                                "motorcycles": 48038
+                            },
+                            {
+                                "date": "01.01.2004",
+                                "stateId": 2,
+                                "state": "Hamburg",
+                                "total": 960406,
+                                "passenger-cars": 836001,
+                                "trucks": 54399,
+                                "tractors": 6553,
+                                "motorcycles": 47334
+                            },
+                            {
+                                "date": "01.01.2003",
+                                "stateId": 2,
+                                "state": "Hamburg",
+                                "total": 947472,
+                                "passenger-cars": 824634,
+                                "trucks": 54246,
+                                "tractors": 6388,
+                                "motorcycles": 46162
+                            },
+                            {
+                                "date": "01.01.2002",
+                                "stateId": 2,
+                                "state": "Hamburg",
+                                "total": 949968,
+                                "passenger-cars": 826158,
+                                "trucks": 56732,
+                                "tractors": 6391,
+                                "motorcycles": 44654
+                            },
+                            {
+                                "date": "01.01.2001",
+                                "stateId": 2,
+                                "state": "Hamburg",
+                                "total": 942158,
+                                "passenger-cars": 822612,
+                                "trucks": 55406,
+                                "tractors": 6254,
+                                "motorcycles": 42458
+                            },
+                            {
+                                "date": "01.01.2000",
+                                "stateId": 2,
+                                "state": "Hamburg",
+                                "total": 882789,
+                                "passenger-cars": 772081,
+                                "trucks": 50103,
+                                "tractors": 5932,
+                                "motorcycles": 39696
+                            },
+                            {
+                                "date": "01.01.1999",
+                                "stateId": 2,
+                                "state": "Hamburg",
+                                "total": 812148,
+                                "passenger-cars": 708618,
+                                "trucks": 44500,
+                                "tractors": 5747,
+                                "motorcycles": 38255
+                            },
+                            {
+                                "date": "01.01.1998",
+                                "stateId": 2,
+                                "state": "Hamburg",
+                                "total": 811420,
+                                "passenger-cars": 711012,
+                                "trucks": 44650,
+                                "tractors": 5643,
+                                "motorcycles": 35039
+                            },
+                            {
+                                "date": "01.01.1997",
+                                "stateId": 2,
+                                "state": "Hamburg",
+                                "total": 808174,
+                                "passenger-cars": 712480,
+                                "trucks": 42745,
+                                "tractors": 5555,
+                                "motorcycles": 32591
+                            },
+                            {
+                                "date": "01.01.1996",
+                                "stateId": 2,
+                                "state": "Hamburg",
+                                "total": 804231,
+                                "passenger-cars": 710927,
+                                "trucks": 42781,
+                                "tractors": 5485,
+                                "motorcycles": 30228
+                            }
+                        ]
                     },
                     {
                         "memberIdRef": "niedersachsen",
@@ -214,9 +654,421 @@
                         "value": "Niedersachsen"
                     },
                     {
+                        "memberIdRef": "niedersachsen",
+                        "slot": "data",
+                        "value": [
+                            {
+                                "date": "01.01.2015",
+                                "stateId": 3,
+                                "state": "Niedersachsen",
+                                "total": 5384978,
+                                "passenger-cars": 4451016,
+                                "trucks": 254989,
+                                "tractors": 238376,
+                                "motorcycles": 403383
+                            },
+                            {
+                                "date": "01.01.2014",
+                                "stateId": 3,
+                                "state": "Niedersachsen",
+                                "total": 5299143,
+                                "passenger-cars": 4383401,
+                                "trucks": 248559,
+                                "tractors": 235074,
+                                "motorcycles": 395517
+                            },
+                            {
+                                "date": "01.01.2013",
+                                "stateId": 3,
+                                "state": "Niedersachsen",
+                                "total": 5222810,
+                                "passenger-cars": 4320354,
+                                "trucks": 244354,
+                                "tractors": 232393,
+                                "motorcycles": 389681
+                            },
+                            {
+                                "date": "01.01.2012",
+                                "stateId": 3,
+                                "state": "Niedersachsen",
+                                "total": 5142420,
+                                "passenger-cars": 4255217,
+                                "trucks": 238668,
+                                "tractors": 229985,
+                                "motorcycles": 383048
+                            },
+                            {
+                                "date": "01.01.2011",
+                                "stateId": 3,
+                                "state": "Niedersachsen",
+                                "total": 5043947,
+                                "passenger-cars": 4175413,
+                                "trucks": 230193,
+                                "tractors": 226951,
+                                "motorcycles": 376322
+                            },
+                            {
+                                "date": "01.01.2010",
+                                "stateId": 3,
+                                "state": "Niedersachsen",
+                                "total": 4962949,
+                                "passenger-cars": 4110328,
+                                "trucks": 223330,
+                                "tractors": 223696,
+                                "motorcycles": 370674
+                            },
+                            {
+                                "date": "01.01.2009",
+                                "stateId": 3,
+                                "state": "Niedersachsen",
+                                "total": 4895553,
+                                "passenger-cars": 4058368,
+                                "trucks": 218887,
+                                "tractors": 223244,
+                                "motorcycles": 360579
+                            },
+                            {
+                                "date": "01.01.2008",
+                                "stateId": 3,
+                                "state": "Niedersachsen",
+                                "total": 4871662,
+                                "passenger-cars": 4044777,
+                                "trucks": 216710,
+                                "tractors": 223769,
+                                "motorcycles": 352333
+                            },
+                            {
+                                "date": "01.01.2007",
+                                "stateId": 3,
+                                "state": "Niedersachsen",
+                                "total": 5486994,
+                                "passenger-cars": 4577511,
+                                "trucks": 242738,
+                                "tractors": 236405,
+                                "motorcycles": 392797
+                            },
+                            {
+                                "date": "01.01.2006",
+                                "stateId": 3,
+                                "state": "Niedersachsen",
+                                "total": 5430676,
+                                "passenger-cars": 4529350,
+                                "trucks": 241306,
+                                "tractors": 234352,
+                                "motorcycles": 387554
+                            },
+                            {
+                                "date": "01.01.2005",
+                                "stateId": 3,
+                                "state": "Niedersachsen",
+                                "total": 5404796,
+                                "passenger-cars": 4461355,
+                                "trucks": 241978,
+                                "tractors": 233545,
+                                "motorcycles": 382722
+                            },
+                            {
+                                "date": "01.01.2004",
+                                "stateId": 3,
+                                "state": "Niedersachsen",
+                                "total": 5378884,
+                                "passenger-cars": 4440092,
+                                "trucks": 244407,
+                                "tractors": 234288,
+                                "motorcycles": 376148
+                            },
+                            {
+                                "date": "01.01.2003",
+                                "stateId": 3,
+                                "state": "Niedersachsen",
+                                "total": 5328738,
+                                "passenger-cars": 4392656,
+                                "trucks": 248575,
+                                "tractors": 235637,
+                                "motorcycles": 368836
+                            },
+                            {
+                                "date": "01.01.2002",
+                                "stateId": 3,
+                                "state": "Niedersachsen",
+                                "total": 5301616,
+                                "passenger-cars": 4373403,
+                                "trucks": 249464,
+                                "tractors": 236176,
+                                "motorcycles": 360208
+                            },
+                            {
+                                "date": "01.01.2001",
+                                "stateId": 3,
+                                "state": "Niedersachsen",
+                                "total": 5248380,
+                                "passenger-cars": 4341255,
+                                "trucks": 244277,
+                                "tractors": 235842,
+                                "motorcycles": 346318
+                            },
+                            {
+                                "date": "01.01.2000",
+                                "stateId": 3,
+                                "state": "Niedersachsen",
+                                "total": 5061643,
+                                "passenger-cars": 4195121,
+                                "trucks": 232699,
+                                "tractors": 232774,
+                                "motorcycles": 323154
+                            },
+                            {
+                                "date": "01.01.1999",
+                                "stateId": 3,
+                                "state": "Niedersachsen",
+                                "total": 5006246,
+                                "passenger-cars": 4167168,
+                                "trucks": 225598,
+                                "tractors": 233000,
+                                "motorcycles": 303687
+                            },
+                            {
+                                "date": "01.01.1998",
+                                "stateId": 3,
+                                "state": "Niedersachsen",
+                                "total": 4906363,
+                                "passenger-cars": 4105802,
+                                "trucks": 214630,
+                                "tractors": 233250,
+                                "motorcycles": 277375
+                            },
+                            {
+                                "date": "01.01.1997",
+                                "stateId": 3,
+                                "state": "Niedersachsen",
+                                "total": 4796956,
+                                "passenger-cars": 4035193,
+                                "trucks": 200693,
+                                "tractors": 234477,
+                                "motorcycles": 253319
+                            },
+                            {
+                                "date": "01.01.1996",
+                                "stateId": 3,
+                                "state": "Niedersachsen",
+                                "total": 4704242,
+                                "passenger-cars": 3971289,
+                                "trucks": 195430,
+                                "tractors": 236767,
+                                "motorcycles": 228998
+                            }
+                        ]
+                    },
+                    {
                         "memberIdRef": "bremen",
                         "slot": "displayname",
                         "value": "Bremen"
+                    },
+                    {
+                        "memberIdRef": "bremen",
+                        "slot": "data",
+                        "value": [
+                            {
+                                "date": "01.01.2015",
+                                "stateId": 4,
+                                "state": "Bremen",
+                                "total": 322178,
+                                "passenger-cars": 280107,
+                                "trucks": 16297,
+                                "tractors": 3243,
+                                "motorcycles": 20393
+                            },
+                            {
+                                "date": "01.01.2014",
+                                "stateId": 4,
+                                "state": "Bremen",
+                                "total": 318041,
+                                "passenger-cars": 276270,
+                                "trucks": 16232,
+                                "tractors": 3203,
+                                "motorcycles": 20201
+                            },
+                            {
+                                "date": "01.01.2013",
+                                "stateId": 4,
+                                "state": "Bremen",
+                                "total": 314819,
+                                "passenger-cars": 273406,
+                                "trucks": 16158,
+                                "tractors": 3119,
+                                "motorcycles": 20050
+                            },
+                            {
+                                "date": "01.01.2012",
+                                "stateId": 4,
+                                "state": "Bremen",
+                                "total": 311045,
+                                "passenger-cars": 269995,
+                                "trucks": 16040,
+                                "tractors": 3213,
+                                "motorcycles": 19763
+                            },
+                            {
+                                "date": "01.01.2011",
+                                "stateId": 4,
+                                "state": "Bremen",
+                                "total": 305462,
+                                "passenger-cars": 265066,
+                                "trucks": 15764,
+                                "tractors": 3126,
+                                "motorcycles": 19451
+                            },
+                            {
+                                "date": "01.01.2010",
+                                "stateId": 4,
+                                "state": "Bremen",
+                                "total": 301277,
+                                "passenger-cars": 261172,
+                                "trucks": 15651,
+                                "tractors": 3114,
+                                "motorcycles": 19318
+                            },
+                            {
+                                "date": "01.01.2009",
+                                "stateId": 4,
+                                "state": "Bremen",
+                                "total": 299283,
+                                "passenger-cars": 259335,
+                                "trucks": 15806,
+                                "tractors": 3318,
+                                "motorcycles": 18813
+                            },
+                            {
+                                "date": "01.01.2008",
+                                "stateId": 4,
+                                "state": "Bremen",
+                                "total": 298262,
+                                "passenger-cars": 258846,
+                                "trucks": 15716,
+                                "tractors": 3205,
+                                "motorcycles": 18518
+                            },
+                            {
+                                "date": "01.01.2007",
+                                "stateId": 4,
+                                "state": "Bremen",
+                                "total": 335365,
+                                "passenger-cars": 292248,
+                                "trucks": 17513,
+                                "tractors": 3148,
+                                "motorcycles": 20349
+                            },
+                            {
+                                "date": "01.01.2006",
+                                "stateId": 4,
+                                "state": "Bremen",
+                                "total": 336765,
+                                "passenger-cars": 293925,
+                                "trucks": 17420,
+                                "tractors": 3007,
+                                "motorcycles": 20243
+                            },
+                            {
+                                "date": "01.01.2005",
+                                "stateId": 4,
+                                "state": "Bremen",
+                                "total": 338714,
+                                "passenger-cars": 292711,
+                                "trucks": 17527,
+                                "tractors": 2922,
+                                "motorcycles": 19998
+                            },
+                            {
+                                "date": "01.01.2004",
+                                "stateId": 4,
+                                "state": "Bremen",
+                                "total": 338592,
+                                "passenger-cars": 292399,
+                                "trucks": 17872,
+                                "tractors": 2902,
+                                "motorcycles": 19791
+                            },
+                            {
+                                "date": "01.01.2003",
+                                "stateId": 4,
+                                "state": "Bremen",
+                                "total": 339583,
+                                "passenger-cars": 292885,
+                                "trucks": 18433,
+                                "tractors": 2918,
+                                "motorcycles": 19648
+                            },
+                            {
+                                "date": "01.01.2002",
+                                "stateId": 4,
+                                "state": "Bremen",
+                                "total": 341405,
+                                "passenger-cars": 294415,
+                                "trucks": 18930,
+                                "tractors": 2932,
+                                "motorcycles": 19433
+                            },
+                            {
+                                "date": "01.01.2001",
+                                "stateId": 4,
+                                "state": "Bremen",
+                                "total": 337252,
+                                "passenger-cars": 291258,
+                                "trucks": 18545,
+                                "tractors": 2836,
+                                "motorcycles": 19038
+                            },
+                            {
+                                "date": "01.01.2000",
+                                "stateId": 4,
+                                "state": "Bremen",
+                                "total": 329366,
+                                "passenger-cars": 285270,
+                                "trucks": 17623,
+                                "tractors": 2835,
+                                "motorcycles": 18087
+                            },
+                            {
+                                "date": "01.01.1999",
+                                "stateId": 4,
+                                "state": "Bremen",
+                                "total": 327426,
+                                "passenger-cars": 284002,
+                                "trucks": 17620,
+                                "tractors": 2726,
+                                "motorcycles": 17528
+                            },
+                            {
+                                "date": "01.01.1998",
+                                "stateId": 4,
+                                "state": "Bremen",
+                                "total": 329765,
+                                "passenger-cars": 287843,
+                                "trucks": 17285,
+                                "tractors": 2727,
+                                "motorcycles": 16300
+                            },
+                            {
+                                "date": "01.01.1997",
+                                "stateId": 4,
+                                "state": "Bremen",
+                                "total": 330373,
+                                "passenger-cars": 291150,
+                                "trucks": 15654,
+                                "tractors": 2752,
+                                "motorcycles": 15215
+                            },
+                            {
+                                "date": "01.01.1996",
+                                "stateId": 4,
+                                "state": "Bremen",
+                                "total": 328280,
+                                "passenger-cars": 290185,
+                                "trucks": 15697,
+                                "tractors": 2752,
+                                "motorcycles": 13962
+                            }
+                        ]
                     },
                     {
                         "memberIdRef": "nordrheinWestfalen",
@@ -224,9 +1076,421 @@
                         "value": "Nordrhein-Westfalen"
                     },
                     {
+                        "memberIdRef": "nordrheinWestfalen",
+                        "slot": "data",
+                        "value": [
+                            {
+                                "date": "01.01.2015",
+                                "stateId": 5,
+                                "state": "Nordrhein-Westfalen",
+                                "total": 11133413,
+                                "passenger-cars": 9478829,
+                                "trucks": 549240,
+                                "tractors": 238538,
+                                "motorcycles": 804763
+                            },
+                            {
+                                "date": "01.01.2014",
+                                "stateId": 5,
+                                "state": "Nordrhein-Westfalen",
+                                "total": 10974876,
+                                "passenger-cars": 9354668,
+                                "trucks": 529614,
+                                "tractors": 235128,
+                                "motorcycles": 793895
+                            },
+                            {
+                                "date": "01.01.2013",
+                                "stateId": 5,
+                                "state": "Nordrhein-Westfalen",
+                                "total": 10863004,
+                                "passenger-cars": 9264268,
+                                "trucks": 517873,
+                                "tractors": 231803,
+                                "motorcycles": 787951
+                            },
+                            {
+                                "date": "01.01.2012",
+                                "stateId": 5,
+                                "state": "Nordrhein-Westfalen",
+                                "total": 10729393,
+                                "passenger-cars": 9153264,
+                                "trucks": 504453,
+                                "tractors": 228913,
+                                "motorcycles": 781993
+                            },
+                            {
+                                "date": "01.01.2011",
+                                "stateId": 5,
+                                "state": "Nordrhein-Westfalen",
+                                "total": 10573240,
+                                "passenger-cars": 9029180,
+                                "trucks": 486025,
+                                "tractors": 224299,
+                                "motorcycles": 773394
+                            },
+                            {
+                                "date": "01.01.2010",
+                                "stateId": 5,
+                                "state": "Nordrhein-Westfalen",
+                                "total": 10425356,
+                                "passenger-cars": 8902315,
+                                "trucks": 472860,
+                                "tractors": 220134,
+                                "motorcycles": 769611
+                            },
+                            {
+                                "date": "01.01.2009",
+                                "stateId": 5,
+                                "state": "Nordrhein-Westfalen",
+                                "total": 10318681,
+                                "passenger-cars": 8820040,
+                                "trucks": 465188,
+                                "tractors": 218931,
+                                "motorcycles": 754622
+                            },
+                            {
+                                "date": "01.01.2008",
+                                "stateId": 5,
+                                "state": "Nordrhein-Westfalen",
+                                "total": 10289181,
+                                "passenger-cars": 8809659,
+                                "trucks": 457978,
+                                "tractors": 217093,
+                                "motorcycles": 744921
+                            },
+                            {
+                                "date": "01.01.2007",
+                                "stateId": 5,
+                                "state": "Nordrhein-Westfalen",
+                                "total": 11563285,
+                                "passenger-cars": 9932590,
+                                "trucks": 505713,
+                                "tractors": 228656,
+                                "motorcycles": 829935
+                            },
+                            {
+                                "date": "01.01.2006",
+                                "stateId": 5,
+                                "state": "Nordrhein-Westfalen",
+                                "total": 11445479,
+                                "passenger-cars": 9831843,
+                                "trucks": 496514,
+                                "tractors": 225682,
+                                "motorcycles": 825714
+                            },
+                            {
+                                "date": "01.01.2005",
+                                "stateId": 5,
+                                "state": "Nordrhein-Westfalen",
+                                "total": 11426533,
+                                "passenger-cars": 9733822,
+                                "trucks": 497064,
+                                "tractors": 224230,
+                                "motorcycles": 818808
+                            },
+                            {
+                                "date": "01.01.2004",
+                                "stateId": 5,
+                                "state": "Nordrhein-Westfalen",
+                                "total": 11349120,
+                                "passenger-cars": 9664439,
+                                "trucks": 500311,
+                                "tractors": 222718,
+                                "motorcycles": 810648
+                            },
+                            {
+                                "date": "01.01.2003",
+                                "stateId": 5,
+                                "state": "Nordrhein-Westfalen",
+                                "total": 11255936,
+                                "passenger-cars": 9579221,
+                                "trucks": 505265,
+                                "tractors": 222542,
+                                "motorcycles": 799194
+                            },
+                            {
+                                "date": "01.01.2002",
+                                "stateId": 5,
+                                "state": "Nordrhein-Westfalen",
+                                "total": 11183116,
+                                "passenger-cars": 9518936,
+                                "trucks": 509195,
+                                "tractors": 222661,
+                                "motorcycles": 783285
+                            },
+                            {
+                                "date": "01.01.2001",
+                                "stateId": 5,
+                                "state": "Nordrhein-Westfalen",
+                                "total": 10969936,
+                                "passenger-cars": 9345166,
+                                "trucks": 499208,
+                                "tractors": 220634,
+                                "motorcycles": 757966
+                            },
+                            {
+                                "date": "01.01.2000",
+                                "stateId": 5,
+                                "state": "Nordrhein-Westfalen",
+                                "total": 10617042,
+                                "passenger-cars": 9070316,
+                                "trucks": 475230,
+                                "tractors": 215617,
+                                "motorcycles": 713237
+                            },
+                            {
+                                "date": "01.01.1999",
+                                "stateId": 5,
+                                "state": "Nordrhein-Westfalen",
+                                "total": 10452479,
+                                "passenger-cars": 8959535,
+                                "trucks": 459862,
+                                "tractors": 213884,
+                                "motorcycles": 676829
+                            },
+                            {
+                                "date": "01.01.1998",
+                                "stateId": 5,
+                                "state": "Nordrhein-Westfalen",
+                                "total": 10349841,
+                                "passenger-cars": 8928133,
+                                "trucks": 443499,
+                                "tractors": 212597,
+                                "motorcycles": 624730
+                            },
+                            {
+                                "date": "01.01.1997",
+                                "stateId": 5,
+                                "state": "Nordrhein-Westfalen",
+                                "total": 10221921,
+                                "passenger-cars": 8886642,
+                                "trucks": 418742,
+                                "tractors": 211882,
+                                "motorcycles": 567317
+                            },
+                            {
+                                "date": "01.01.1996",
+                                "stateId": 5,
+                                "state": "Nordrhein-Westfalen",
+                                "total": 10058688,
+                                "passenger-cars": 8790820,
+                                "trucks": 409811,
+                                "tractors": 212196,
+                                "motorcycles": 510389
+                            }
+                        ]
+                    },
+                    {
                         "memberIdRef": "hessen",
                         "slot": "displayname",
                         "value": "Hessen"
+                    },
+                    {
+                        "memberIdRef": "hessen",
+                        "slot": "data",
+                        "value": [
+                            {
+                                "date": "01.01.2015",
+                                "stateId": 6,
+                                "state": "Hessen",
+                                "total": 4159474,
+                                "passenger-cars": 3483965,
+                                "trucks": 188240,
+                                "tractors": 142716,
+                                "motorcycles": 318507
+                            },
+                            {
+                                "date": "01.01.2014",
+                                "stateId": 6,
+                                "state": "Hessen",
+                                "total": 4105981,
+                                "passenger-cars": 3441406,
+                                "trucks": 183419,
+                                "tractors": 141283,
+                                "motorcycles": 313955
+                            },
+                            {
+                                "date": "01.01.2013",
+                                "stateId": 6,
+                                "state": "Hessen",
+                                "total": 4070638,
+                                "passenger-cars": 3414865,
+                                "trucks": 179799,
+                                "tractors": 140070,
+                                "motorcycles": 310189
+                            },
+                            {
+                                "date": "01.01.2012",
+                                "stateId": 6,
+                                "state": "Hessen",
+                                "total": 4021865,
+                                "passenger-cars": 3372935,
+                                "trucks": 178509,
+                                "tractors": 139108,
+                                "motorcycles": 305532
+                            },
+                            {
+                                "date": "01.01.2011",
+                                "stateId": 6,
+                                "state": "Hessen",
+                                "total": 3960671,
+                                "passenger-cars": 3325303,
+                                "trucks": 172639,
+                                "tractors": 136928,
+                                "motorcycles": 300015
+                            },
+                            {
+                                "date": "01.01.2010",
+                                "stateId": 6,
+                                "state": "Hessen",
+                                "total": 3905719,
+                                "passenger-cars": 3279051,
+                                "trucks": 169318,
+                                "tractors": 135216,
+                                "motorcycles": 296276
+                            },
+                            {
+                                "date": "01.01.2009",
+                                "stateId": 6,
+                                "state": "Hessen",
+                                "total": 3860815,
+                                "passenger-cars": 3243845,
+                                "trucks": 167525,
+                                "tractors": 134494,
+                                "motorcycles": 289033
+                            },
+                            {
+                                "date": "01.01.2008",
+                                "stateId": 6,
+                                "state": "Hessen",
+                                "total": 3857499,
+                                "passenger-cars": 3247373,
+                                "trucks": 166221,
+                                "tractors": 134997,
+                                "motorcycles": 282698
+                            },
+                            {
+                                "date": "01.01.2007",
+                                "stateId": 6,
+                                "state": "Hessen",
+                                "total": 4277440,
+                                "passenger-cars": 3612233,
+                                "trucks": 181789,
+                                "tractors": 139041,
+                                "motorcycles": 316020
+                            },
+                            {
+                                "date": "01.01.2006",
+                                "stateId": 6,
+                                "state": "Hessen",
+                                "total": 4270675,
+                                "passenger-cars": 3609110,
+                                "trucks": 182995,
+                                "tractors": 138299,
+                                "motorcycles": 312189
+                            },
+                            {
+                                "date": "01.01.2005",
+                                "stateId": 6,
+                                "state": "Hessen",
+                                "total": 4245303,
+                                "passenger-cars": 3563518,
+                                "trucks": 183038,
+                                "tractors": 137444,
+                                "motorcycles": 303146
+                            },
+                            {
+                                "date": "01.01.2004",
+                                "stateId": 6,
+                                "state": "Hessen",
+                                "total": 4223592,
+                                "passenger-cars": 3548806,
+                                "trucks": 183529,
+                                "tractors": 136953,
+                                "motorcycles": 296269
+                            },
+                            {
+                                "date": "01.01.2003",
+                                "stateId": 6,
+                                "state": "Hessen",
+                                "total": 4198953,
+                                "passenger-cars": 3528593,
+                                "trucks": 185883,
+                                "tractors": 137301,
+                                "motorcycles": 289184
+                            },
+                            {
+                                "date": "01.01.2002",
+                                "stateId": 6,
+                                "state": "Hessen",
+                                "total": 4161427,
+                                "passenger-cars": 3496251,
+                                "trucks": 187941,
+                                "tractors": 137531,
+                                "motorcycles": 281858
+                            },
+                            {
+                                "date": "01.01.2001",
+                                "stateId": 6,
+                                "state": "Hessen",
+                                "total": 4095245,
+                                "passenger-cars": 3445204,
+                                "trucks": 184140,
+                                "tractors": 137204,
+                                "motorcycles": 271584
+                            },
+                            {
+                                "date": "01.01.2000",
+                                "stateId": 6,
+                                "state": "Hessen",
+                                "total": 3970485,
+                                "passenger-cars": 3350899,
+                                "trucks": 174399,
+                                "tractors": 135741,
+                                "motorcycles": 253848
+                            },
+                            {
+                                "date": "01.01.1999",
+                                "stateId": 6,
+                                "state": "Hessen",
+                                "total": 3919120,
+                                "passenger-cars": 3320305,
+                                "trucks": 166044,
+                                "tractors": 135658,
+                                "motorcycles": 241552
+                            },
+                            {
+                                "date": "01.01.1998",
+                                "stateId": 6,
+                                "state": "Hessen",
+                                "total": 3847939,
+                                "passenger-cars": 3276180,
+                                "trucks": 157786,
+                                "tractors": 135438,
+                                "motorcycles": 223717
+                            },
+                            {
+                                "date": "01.01.1997",
+                                "stateId": 6,
+                                "state": "Hessen",
+                                "total": 3800340,
+                                "passenger-cars": 3257299,
+                                "trucks": 147242,
+                                "tractors": 135826,
+                                "motorcycles": 205121
+                            },
+                            {
+                                "date": "01.01.1996",
+                                "stateId": 6,
+                                "state": "Hessen",
+                                "total": 3733365,
+                                "passenger-cars": 3210755,
+                                "trucks": 144374,
+                                "tractors": 136600,
+                                "motorcycles": 187389
+                            }
+                        ]
                     },
                     {
                         "memberIdRef": "rheinlandPfalz",
@@ -234,9 +1498,421 @@
                         "value": "Rheinland-Pfalz"
                     },
                     {
+                        "memberIdRef": "rheinlandPfalz",
+                        "slot": "data",
+                        "value": [
+                            {
+                                "date": "01.01.2015",
+                                "stateId": 7,
+                                "state": "Rheinland-Pfalz",
+                                "total": 2901080,
+                                "passenger-cars": 2374497,
+                                "trucks": 129215,
+                                "tractors": 144122,
+                                "motorcycles": 233912
+                            },
+                            {
+                                "date": "01.01.2014",
+                                "stateId": 7,
+                                "state": "Rheinland-Pfalz",
+                                "total": 2861761,
+                                "passenger-cars": 2343457,
+                                "trucks": 126390,
+                                "tractors": 142509,
+                                "motorcycles": 230274
+                            },
+                            {
+                                "date": "01.01.2013",
+                                "stateId": 7,
+                                "state": "Rheinland-Pfalz",
+                                "total": 2831701,
+                                "passenger-cars": 2320090,
+                                "trucks": 124164,
+                                "tractors": 141087,
+                                "motorcycles": 227284
+                            },
+                            {
+                                "date": "01.01.2012",
+                                "stateId": 7,
+                                "state": "Rheinland-Pfalz",
+                                "total": 2796124,
+                                "passenger-cars": 2290720,
+                                "trucks": 121861,
+                                "tractors": 140136,
+                                "motorcycles": 224531
+                            },
+                            {
+                                "date": "01.01.2011",
+                                "stateId": 7,
+                                "state": "Rheinland-Pfalz",
+                                "total": 2751541,
+                                "passenger-cars": 2256812,
+                                "trucks": 117491,
+                                "tractors": 137674,
+                                "motorcycles": 220636
+                            },
+                            {
+                                "date": "01.01.2010",
+                                "stateId": 7,
+                                "state": "Rheinland-Pfalz",
+                                "total": 2710686,
+                                "passenger-cars": 2223969,
+                                "trucks": 114475,
+                                "tractors": 135775,
+                                "motorcycles": 217637
+                            },
+                            {
+                                "date": "01.01.2009",
+                                "stateId": 7,
+                                "state": "Rheinland-Pfalz",
+                                "total": 2671389,
+                                "passenger-cars": 2195226,
+                                "trucks": 111889,
+                                "tractors": 134116,
+                                "motorcycles": 211508
+                            },
+                            {
+                                "date": "01.01.2008",
+                                "stateId": 7,
+                                "state": "Rheinland-Pfalz",
+                                "total": 2657954,
+                                "passenger-cars": 2188548,
+                                "trucks": 110865,
+                                "tractors": 132912,
+                                "motorcycles": 207131
+                            },
+                            {
+                                "date": "01.01.2007",
+                                "stateId": 7,
+                                "state": "Rheinland-Pfalz",
+                                "total": 2975990,
+                                "passenger-cars": 2462913,
+                                "trucks": 124888,
+                                "tractors": 138262,
+                                "motorcycles": 229360
+                            },
+                            {
+                                "date": "01.01.2006",
+                                "stateId": 7,
+                                "state": "Rheinland-Pfalz",
+                                "total": 2934273,
+                                "passenger-cars": 2427464,
+                                "trucks": 123967,
+                                "tractors": 137041,
+                                "motorcycles": 225174
+                            },
+                            {
+                                "date": "01.01.2005",
+                                "stateId": 7,
+                                "state": "Rheinland-Pfalz",
+                                "total": 2911846,
+                                "passenger-cars": 2389094,
+                                "trucks": 123885,
+                                "tractors": 136538,
+                                "motorcycles": 221389
+                            },
+                            {
+                                "date": "01.01.2004",
+                                "stateId": 7,
+                                "state": "Rheinland-Pfalz",
+                                "total": 2895764,
+                                "passenger-cars": 2376656,
+                                "trucks": 125112,
+                                "tractors": 136475,
+                                "motorcycles": 216524
+                            },
+                            {
+                                "date": "01.01.2003",
+                                "stateId": 7,
+                                "state": "Rheinland-Pfalz",
+                                "total": 2885533,
+                                "passenger-cars": 2370069,
+                                "trucks": 126008,
+                                "tractors": 137102,
+                                "motorcycles": 211549
+                            },
+                            {
+                                "date": "01.01.2002",
+                                "stateId": 7,
+                                "state": "Rheinland-Pfalz",
+                                "total": 2861809,
+                                "passenger-cars": 2351407,
+                                "trucks": 126429,
+                                "tractors": 137705,
+                                "motorcycles": 205864
+                            },
+                            {
+                                "date": "01.01.2001",
+                                "stateId": 7,
+                                "state": "Rheinland-Pfalz",
+                                "total": 2817319,
+                                "passenger-cars": 2318861,
+                                "trucks": 123331,
+                                "tractors": 137704,
+                                "motorcycles": 197836
+                            },
+                            {
+                                "date": "01.01.2000",
+                                "stateId": 7,
+                                "state": "Rheinland-Pfalz",
+                                "total": 2707177,
+                                "passenger-cars": 2231627,
+                                "trucks": 116025,
+                                "tractors": 136538,
+                                "motorcycles": 184665
+                            },
+                            {
+                                "date": "01.01.1999",
+                                "stateId": 7,
+                                "state": "Rheinland-Pfalz",
+                                "total": 2634577,
+                                "passenger-cars": 2172161,
+                                "trucks": 112745,
+                                "tractors": 137131,
+                                "motorcycles": 174632
+                            },
+                            {
+                                "date": "01.01.1998",
+                                "stateId": 7,
+                                "state": "Rheinland-Pfalz",
+                                "total": 2597209,
+                                "passenger-cars": 2154198,
+                                "trucks": 108293,
+                                "tractors": 137515,
+                                "motorcycles": 160105
+                            },
+                            {
+                                "date": "01.01.1997",
+                                "stateId": 7,
+                                "state": "Rheinland-Pfalz",
+                                "total": 2556461,
+                                "passenger-cars": 2135050,
+                                "trucks": 101229,
+                                "tractors": 138460,
+                                "motorcycles": 145738
+                            },
+                            {
+                                "date": "01.01.1996",
+                                "stateId": 7,
+                                "state": "Rheinland-Pfalz",
+                                "total": 2511863,
+                                "passenger-cars": 2106906,
+                                "trucks": 98826,
+                                "tractors": 139306,
+                                "motorcycles": 131753
+                            }
+                        ]
+                    },
+                    {
                         "memberIdRef": "badenWuerttemberg",
                         "slot": "displayname",
                         "value": "Baden-Württemberg"
+                    },
+                    {
+                        "memberIdRef": "badenWuerttemberg",
+                        "slot": "data",
+                        "value": [
+                            {
+                                "date": "01.01.2015",
+                                "stateId": 8,
+                                "state": "Baden-Württemberg",
+                                "total": 7526662,
+                                "passenger-cars": 6171168,
+                                "trucks": 319784,
+                                "tractors": 362747,
+                                "motorcycles": 633413
+                            },
+                            {
+                                "date": "01.01.2014",
+                                "stateId": 8,
+                                "state": "Baden-Württemberg",
+                                "total": 7395563,
+                                "passenger-cars": 6070405,
+                                "trucks": 311096,
+                                "tractors": 358901,
+                                "motorcycles": 616410
+                            },
+                            {
+                                "date": "01.01.2013",
+                                "stateId": 8,
+                                "state": "Baden-Württemberg",
+                                "total": 7290153,
+                                "passenger-cars": 5989716,
+                                "trucks": 304322,
+                                "tractors": 355531,
+                                "motorcycles": 602101
+                            },
+                            {
+                                "date": "01.01.2012",
+                                "stateId": 8,
+                                "state": "Baden-Württemberg",
+                                "total": 7173076,
+                                "passenger-cars": 5897054,
+                                "trucks": 298037,
+                                "tractors": 351879,
+                                "motorcycles": 587642
+                            },
+                            {
+                                "date": "01.01.2011",
+                                "stateId": 8,
+                                "state": "Baden-Württemberg",
+                                "total": 7040779,
+                                "passenger-cars": 5794361,
+                                "trucks": 288153,
+                                "tractors": 346991,
+                                "motorcycles": 572893
+                            },
+                            {
+                                "date": "01.01.2010",
+                                "stateId": 8,
+                                "state": "Baden-Württemberg",
+                                "total": 6944460,
+                                "passenger-cars": 5718717,
+                                "trucks": 282278,
+                                "tractors": 342534,
+                                "motorcycles": 562510
+                            },
+                            {
+                                "date": "01.01.2009",
+                                "stateId": 8,
+                                "state": "Baden-Württemberg",
+                                "total": 6867506,
+                                "passenger-cars": 5663963,
+                                "trucks": 278813,
+                                "tractors": 339583,
+                                "motorcycles": 546877
+                            },
+                            {
+                                "date": "01.01.2008",
+                                "stateId": 8,
+                                "state": "Baden-Württemberg",
+                                "total": 6812594,
+                                "passenger-cars": 5629358,
+                                "trucks": 276269,
+                                "tractors": 337198,
+                                "motorcycles": 531528
+                            },
+                            {
+                                "date": "01.01.2007",
+                                "stateId": 8,
+                                "state": "Baden-Württemberg",
+                                "total": 7637665,
+                                "passenger-cars": 6352765,
+                                "trucks": 306782,
+                                "tractors": 345986,
+                                "motorcycles": 590279
+                            },
+                            {
+                                "date": "01.01.2006",
+                                "stateId": 8,
+                                "state": "Baden-Württemberg",
+                                "total": 7529744,
+                                "passenger-cars": 6267590,
+                                "trucks": 299826,
+                                "tractors": 341756,
+                                "motorcycles": 578529
+                            },
+                            {
+                                "date": "01.01.2005",
+                                "stateId": 8,
+                                "state": "Baden-Württemberg",
+                                "total": 7463426,
+                                "passenger-cars": 6150096,
+                                "trucks": 298483,
+                                "tractors": 339437,
+                                "motorcycles": 567299
+                            },
+                            {
+                                "date": "01.01.2004",
+                                "stateId": 8,
+                                "state": "Baden-Württemberg",
+                                "total": 7384358,
+                                "passenger-cars": 6083702,
+                                "trucks": 299639,
+                                "tractors": 337845,
+                                "motorcycles": 555351
+                            },
+                            {
+                                "date": "01.01.2003",
+                                "stateId": 8,
+                                "state": "Baden-Württemberg",
+                                "total": 7324897,
+                                "passenger-cars": 6031043,
+                                "trucks": 304751,
+                                "tractors": 337217,
+                                "motorcycles": 544232
+                            },
+                            {
+                                "date": "01.01.2002",
+                                "stateId": 8,
+                                "state": "Baden-Württemberg",
+                                "total": 7258549,
+                                "passenger-cars": 5975963,
+                                "trucks": 307203,
+                                "tractors": 336156,
+                                "motorcycles": 531388
+                            },
+                            {
+                                "date": "01.01.2001",
+                                "stateId": 8,
+                                "state": "Baden-Württemberg",
+                                "total": 7119150,
+                                "passenger-cars": 5866290,
+                                "trucks": 299882,
+                                "tractors": 333954,
+                                "motorcycles": 512148
+                            },
+                            {
+                                "date": "01.01.2000",
+                                "stateId": 8,
+                                "state": "Baden-Württemberg",
+                                "total": 6858995,
+                                "passenger-cars": 5660152,
+                                "trucks": 283708,
+                                "tractors": 329548,
+                                "motorcycles": 481539
+                            },
+                            {
+                                "date": "01.01.1999",
+                                "stateId": 8,
+                                "state": "Baden-Württemberg",
+                                "total": 6714668,
+                                "passenger-cars": 5546444,
+                                "trucks": 274519,
+                                "tractors": 328292,
+                                "motorcycles": 461468
+                            },
+                            {
+                                "date": "01.01.1998",
+                                "stateId": 8,
+                                "state": "Baden-Württemberg",
+                                "total": 6612765,
+                                "passenger-cars": 5487322,
+                                "trucks": 263742,
+                                "tractors": 326961,
+                                "motorcycles": 431451
+                            },
+                            {
+                                "date": "01.01.1997",
+                                "stateId": 8,
+                                "state": "Baden-Württemberg",
+                                "total": 6554018,
+                                "passenger-cars": 5471966,
+                                "trucks": 250491,
+                                "tractors": 325933,
+                                "motorcycles": 403445
+                            },
+                            {
+                                "date": "01.01.1996",
+                                "stateId": 8,
+                                "state": "Baden-Württemberg",
+                                "total": 6451180,
+                                "passenger-cars": 5404550,
+                                "trucks": 245783,
+                                "tractors": 325324,
+                                "motorcycles": 374387
+                            }
+                        ]
                     },
                     {
                         "memberIdRef": "bayern",
@@ -244,9 +1920,421 @@
                         "value": "Bayern"
                     },
                     {
+                        "memberIdRef": "bayern",
+                        "slot": "data",
+                        "value": [
+                            {
+                                "date": "01.01.2015",
+                                "stateId": 9,
+                                "state": "Bayern",
+                                "total": 9403527,
+                                "passenger-cars": 7427661,
+                                "trucks": 408154,
+                                "tractors": 644159,
+                                "motorcycles": 862403
+                            },
+                            {
+                                "date": "01.01.2014",
+                                "stateId": 9,
+                                "state": "Bayern",
+                                "total": 9240580,
+                                "passenger-cars": 7311093,
+                                "trucks": 396513,
+                                "tractors": 636315,
+                                "motorcycles": 836686
+                            },
+                            {
+                                "date": "01.01.2013",
+                                "stateId": 9,
+                                "state": "Bayern",
+                                "total": 9103344,
+                                "passenger-cars": 7214493,
+                                "trucks": 387828,
+                                "tractors": 627886,
+                                "motorcycles": 814571
+                            },
+                            {
+                                "date": "01.01.2012",
+                                "stateId": 9,
+                                "state": "Bayern",
+                                "total": 8959539,
+                                "passenger-cars": 7110701,
+                                "trucks": 379303,
+                                "tractors": 619282,
+                                "motorcycles": 792637
+                            },
+                            {
+                                "date": "01.01.2011",
+                                "stateId": 9,
+                                "state": "Bayern",
+                                "total": 8761017,
+                                "passenger-cars": 6958119,
+                                "trucks": 364135,
+                                "tractors": 610443,
+                                "motorcycles": 771641
+                            },
+                            {
+                                "date": "01.01.2010",
+                                "stateId": 9,
+                                "state": "Bayern",
+                                "total": 8630327,
+                                "passenger-cars": 6862802,
+                                "trucks": 354440,
+                                "tractors": 603317,
+                                "motorcycles": 753790
+                            },
+                            {
+                                "date": "01.01.2009",
+                                "stateId": 9,
+                                "state": "Bayern",
+                                "total": 8499456,
+                                "passenger-cars": 6772212,
+                                "trucks": 346851,
+                                "tractors": 596392,
+                                "motorcycles": 728882
+                            },
+                            {
+                                "date": "01.01.2008",
+                                "stateId": 9,
+                                "state": "Bayern",
+                                "total": 8409763,
+                                "passenger-cars": 6717050,
+                                "trucks": 341366,
+                                "tractors": 590831,
+                                "motorcycles": 706225
+                            },
+                            {
+                                "date": "01.01.2007",
+                                "stateId": 9,
+                                "state": "Bayern",
+                                "total": 9496289,
+                                "passenger-cars": 7638869,
+                                "trucks": 394206,
+                                "tractors": 611316,
+                                "motorcycles": 791750
+                            },
+                            {
+                                "date": "01.01.2006",
+                                "stateId": 9,
+                                "state": "Bayern",
+                                "total": 9338023,
+                                "passenger-cars": 7513438,
+                                "trucks": 384093,
+                                "tractors": 605154,
+                                "motorcycles": 775278
+                            },
+                            {
+                                "date": "01.01.2005",
+                                "stateId": 9,
+                                "state": "Bayern",
+                                "total": 9183729,
+                                "passenger-cars": 7300847,
+                                "trucks": 378935,
+                                "tractors": 602425,
+                                "motorcycles": 757859
+                            },
+                            {
+                                "date": "01.01.2004",
+                                "stateId": 9,
+                                "state": "Bayern",
+                                "total": 9053383,
+                                "passenger-cars": 7195111,
+                                "trucks": 379419,
+                                "tractors": 600540,
+                                "motorcycles": 736537
+                            },
+                            {
+                                "date": "01.01.2003",
+                                "stateId": 9,
+                                "state": "Bayern",
+                                "total": 8946820,
+                                "passenger-cars": 7107530,
+                                "trucks": 382595,
+                                "tractors": 600033,
+                                "motorcycles": 716408
+                            },
+                            {
+                                "date": "01.01.2002",
+                                "stateId": 9,
+                                "state": "Bayern",
+                                "total": 8865295,
+                                "passenger-cars": 7046089,
+                                "trucks": 384621,
+                                "tractors": 599344,
+                                "motorcycles": 696518
+                            },
+                            {
+                                "date": "01.01.2001",
+                                "stateId": 9,
+                                "state": "Bayern",
+                                "total": 8702563,
+                                "passenger-cars": 6928092,
+                                "trucks": 376316,
+                                "tractors": 597766,
+                                "motorcycles": 664387
+                            },
+                            {
+                                "date": "01.01.2000",
+                                "stateId": 9,
+                                "state": "Bayern",
+                                "total": 8410943,
+                                "passenger-cars": 6712880,
+                                "trucks": 357910,
+                                "tractors": 590400,
+                                "motorcycles": 618514
+                            },
+                            {
+                                "date": "01.01.1999",
+                                "stateId": 9,
+                                "state": "Bayern",
+                                "total": 8229086,
+                                "passenger-cars": 6573044,
+                                "trucks": 345358,
+                                "tractors": 589281,
+                                "motorcycles": 590671
+                            },
+                            {
+                                "date": "01.01.1998",
+                                "stateId": 9,
+                                "state": "Bayern",
+                                "total": 8066051,
+                                "passenger-cars": 6472149,
+                                "trucks": 330163,
+                                "tractors": 587785,
+                                "motorcycles": 547212
+                            },
+                            {
+                                "date": "01.01.1997",
+                                "stateId": 9,
+                                "state": "Bayern",
+                                "total": 7932734,
+                                "passenger-cars": 6400749,
+                                "trucks": 310465,
+                                "tractors": 588494,
+                                "motorcycles": 506906
+                            },
+                            {
+                                "date": "01.01.1996",
+                                "stateId": 9,
+                                "state": "Bayern",
+                                "total": 7782074,
+                                "passenger-cars": 6299029,
+                                "trucks": 305271,
+                                "tractors": 589724,
+                                "motorcycles": 464269
+                            }
+                        ]
+                    },
+                    {
                         "memberIdRef": "saarland",
                         "slot": "displayname",
                         "value": "Saarland"
+                    },
+                    {
+                        "memberIdRef": "saarland",
+                        "slot": "data",
+                        "value": [
+                            {
+                                "date": "01.01.2015",
+                                "stateId": 10,
+                                "state": "Saarland",
+                                "total": 720282,
+                                "passenger-cars": 608463,
+                                "trucks": 31869,
+                                "tractors": 17344,
+                                "motorcycles": 58197
+                            },
+                            {
+                                "date": "01.01.2014",
+                                "stateId": 10,
+                                "state": "Saarland",
+                                "total": 713328,
+                                "passenger-cars": 603331,
+                                "trucks": 31351,
+                                "tractors": 16997,
+                                "motorcycles": 57333
+                            },
+                            {
+                                "date": "01.01.2013",
+                                "stateId": 10,
+                                "state": "Saarland",
+                                "total": 708778,
+                                "passenger-cars": 599509,
+                                "trucks": 31275,
+                                "tractors": 16782,
+                                "motorcycles": 56883
+                            },
+                            {
+                                "date": "01.01.2012",
+                                "stateId": 10,
+                                "state": "Saarland",
+                                "total": 702616,
+                                "passenger-cars": 594513,
+                                "trucks": 30873,
+                                "tractors": 16536,
+                                "motorcycles": 56310
+                            },
+                            {
+                                "date": "01.01.2011",
+                                "stateId": 10,
+                                "state": "Saarland",
+                                "total": 693217,
+                                "passenger-cars": 587008,
+                                "trucks": 30036,
+                                "tractors": 16211,
+                                "motorcycles": 55587
+                            },
+                            {
+                                "date": "01.01.2010",
+                                "stateId": 10,
+                                "state": "Saarland",
+                                "total": 686905,
+                                "passenger-cars": 582159,
+                                "trucks": 29244,
+                                "tractors": 15909,
+                                "motorcycles": 55190
+                            },
+                            {
+                                "date": "01.01.2009",
+                                "stateId": 10,
+                                "state": "Saarland",
+                                "total": 678332,
+                                "passenger-cars": 575317,
+                                "trucks": 28753,
+                                "tractors": 15606,
+                                "motorcycles": 54314
+                            },
+                            {
+                                "date": "01.01.2008",
+                                "stateId": 10,
+                                "state": "Saarland",
+                                "total": 676104,
+                                "passenger-cars": 574200,
+                                "trucks": 28546,
+                                "tractors": 15425,
+                                "motorcycles": 53546
+                            },
+                            {
+                                "date": "01.01.2007",
+                                "stateId": 10,
+                                "state": "Saarland",
+                                "total": 764122,
+                                "passenger-cars": 651564,
+                                "trucks": 32312,
+                                "tractors": 16101,
+                                "motorcycles": 59368
+                            },
+                            {
+                                "date": "01.01.2006",
+                                "stateId": 10,
+                                "state": "Saarland",
+                                "total": 756665,
+                                "passenger-cars": 645070,
+                                "trucks": 32395,
+                                "tractors": 15764,
+                                "motorcycles": 58626
+                            },
+                            {
+                                "date": "01.01.2005",
+                                "stateId": 10,
+                                "state": "Saarland",
+                                "total": 751429,
+                                "passenger-cars": 636015,
+                                "trucks": 32876,
+                                "tractors": 15405,
+                                "motorcycles": 57807
+                            },
+                            {
+                                "date": "01.01.2004",
+                                "stateId": 10,
+                                "state": "Saarland",
+                                "total": 749303,
+                                "passenger-cars": 634792,
+                                "trucks": 33304,
+                                "tractors": 15158,
+                                "motorcycles": 56788
+                            },
+                            {
+                                "date": "01.01.2003",
+                                "stateId": 10,
+                                "state": "Saarland",
+                                "total": 746185,
+                                "passenger-cars": 632117,
+                                "trucks": 34365,
+                                "tractors": 14976,
+                                "motorcycles": 55490
+                            },
+                            {
+                                "date": "01.01.2002",
+                                "stateId": 10,
+                                "state": "Saarland",
+                                "total": 741922,
+                                "passenger-cars": 629244,
+                                "trucks": 34411,
+                                "tractors": 14889,
+                                "motorcycles": 54122
+                            },
+                            {
+                                "date": "01.01.2001",
+                                "stateId": 10,
+                                "state": "Saarland",
+                                "total": 728338,
+                                "passenger-cars": 618706,
+                                "trucks": 33525,
+                                "tractors": 14631,
+                                "motorcycles": 52287
+                            },
+                            {
+                                "date": "01.01.2000",
+                                "stateId": 10,
+                                "state": "Saarland",
+                                "total": 701288,
+                                "passenger-cars": 597681,
+                                "trucks": 30837,
+                                "tractors": 14266,
+                                "motorcycles": 49562
+                            },
+                            {
+                                "date": "01.01.1999",
+                                "stateId": 10,
+                                "state": "Saarland",
+                                "total": 690338,
+                                "passenger-cars": 590764,
+                                "trucks": 29381,
+                                "tractors": 14183,
+                                "motorcycles": 47150
+                            },
+                            {
+                                "date": "01.01.1998",
+                                "stateId": 10,
+                                "state": "Saarland",
+                                "total": 680975,
+                                "passenger-cars": 587283,
+                                "trucks": 28128,
+                                "tractors": 14063,
+                                "motorcycles": 42773
+                            },
+                            {
+                                "date": "01.01.1997",
+                                "stateId": 10,
+                                "state": "Saarland",
+                                "total": 673995,
+                                "passenger-cars": 585185,
+                                "trucks": 26812,
+                                "tractors": 13991,
+                                "motorcycles": 39320
+                            },
+                            {
+                                "date": "01.01.1996",
+                                "stateId": 10,
+                                "state": "Saarland",
+                                "total": 663263,
+                                "passenger-cars": 579352,
+                                "trucks": 26111,
+                                "tractors": 13874,
+                                "motorcycles": 35275
+                            }
+                        ]
                     },
                     {
                         "memberIdRef": "brandenburg",
@@ -254,9 +2342,421 @@
                         "value": "Brandenburg"
                     },
                     {
+                        "memberIdRef": "brandenburg",
+                        "slot": "data",
+                        "value": [
+                            {
+                                "date": "01.01.2015",
+                                "stateId": 12,
+                                "state": "Brandenburg",
+                                "total": 1648058,
+                                "passenger-cars": 1353356,
+                                "trucks": 120443,
+                                "tractors": 45855,
+                                "motorcycles": 114297
+                            },
+                            {
+                                "date": "01.01.2014",
+                                "stateId": 12,
+                                "state": "Brandenburg",
+                                "total": 1629582,
+                                "passenger-cars": 1343315,
+                                "trucks": 117610,
+                                "tractors": 44586,
+                                "motorcycles": 110192
+                            },
+                            {
+                                "date": "01.01.2013",
+                                "stateId": 12,
+                                "state": "Brandenburg",
+                                "total": 1616136,
+                                "passenger-cars": 1337091,
+                                "trucks": 115429,
+                                "tractors": 43109,
+                                "motorcycles": 106826
+                            },
+                            {
+                                "date": "01.01.2012",
+                                "stateId": 12,
+                                "state": "Brandenburg",
+                                "total": 1603755,
+                                "passenger-cars": 1330774,
+                                "trucks": 113667,
+                                "tractors": 42061,
+                                "motorcycles": 103665
+                            },
+                            {
+                                "date": "01.01.2011",
+                                "stateId": 12,
+                                "state": "Brandenburg",
+                                "total": 1585455,
+                                "passenger-cars": 1321092,
+                                "trucks": 109932,
+                                "tractors": 40461,
+                                "motorcycles": 100540
+                            },
+                            {
+                                "date": "01.01.2010",
+                                "stateId": 12,
+                                "state": "Brandenburg",
+                                "total": 1567213,
+                                "passenger-cars": 1308910,
+                                "trucks": 108258,
+                                "tractors": 39103,
+                                "motorcycles": 97476
+                            },
+                            {
+                                "date": "01.01.2009",
+                                "stateId": 12,
+                                "state": "Brandenburg",
+                                "total": 1546337,
+                                "passenger-cars": 1295571,
+                                "trucks": 106289,
+                                "tractors": 37953,
+                                "motorcycles": 93034
+                            },
+                            {
+                                "date": "01.01.2008",
+                                "stateId": 12,
+                                "state": "Brandenburg",
+                                "total": 1539785,
+                                "passenger-cars": 1293427,
+                                "trucks": 106326,
+                                "tractors": 36939,
+                                "motorcycles": 89535
+                            },
+                            {
+                                "date": "01.01.2007",
+                                "stateId": 12,
+                                "state": "Brandenburg",
+                                "total": 1737648,
+                                "passenger-cars": 1465417,
+                                "trucks": 120148,
+                                "tractors": 39268,
+                                "motorcycles": 97880
+                            },
+                            {
+                                "date": "01.01.2006",
+                                "stateId": 12,
+                                "state": "Brandenburg",
+                                "total": 1718918,
+                                "passenger-cars": 1452002,
+                                "trucks": 119268,
+                                "tractors": 38334,
+                                "motorcycles": 94375
+                            },
+                            {
+                                "date": "01.01.2005",
+                                "stateId": 12,
+                                "state": "Brandenburg",
+                                "total": 1697839,
+                                "passenger-cars": 1429114,
+                                "trucks": 118727,
+                                "tractors": 37493,
+                                "motorcycles": 90765
+                            },
+                            {
+                                "date": "01.01.2004",
+                                "stateId": 12,
+                                "state": "Brandenburg",
+                                "total": 1670470,
+                                "passenger-cars": 1407645,
+                                "trucks": 118181,
+                                "tractors": 36680,
+                                "motorcycles": 86480
+                            },
+                            {
+                                "date": "01.01.2003",
+                                "stateId": 12,
+                                "state": "Brandenburg",
+                                "total": 1653624,
+                                "passenger-cars": 1394858,
+                                "trucks": 118935,
+                                "tractors": 36650,
+                                "motorcycles": 82066
+                            },
+                            {
+                                "date": "01.01.2002",
+                                "stateId": 12,
+                                "state": "Brandenburg",
+                                "total": 1639823,
+                                "passenger-cars": 1385324,
+                                "trucks": 119757,
+                                "tractors": 36544,
+                                "motorcycles": 77451
+                            },
+                            {
+                                "date": "01.01.2001",
+                                "stateId": 12,
+                                "state": "Brandenburg",
+                                "total": 1615564,
+                                "passenger-cars": 1368395,
+                                "trucks": 119055,
+                                "tractors": 36424,
+                                "motorcycles": 71663
+                            },
+                            {
+                                "date": "01.01.2000",
+                                "stateId": 12,
+                                "state": "Brandenburg",
+                                "total": 1560397,
+                                "passenger-cars": 1327352,
+                                "trucks": 115014,
+                                "tractors": 35516,
+                                "motorcycles": 63223
+                            },
+                            {
+                                "date": "01.01.1999",
+                                "stateId": 12,
+                                "state": "Brandenburg",
+                                "total": 1516266,
+                                "passenger-cars": 1294419,
+                                "trucks": 111950,
+                                "tractors": 35274,
+                                "motorcycles": 55715
+                            },
+                            {
+                                "date": "01.01.1998",
+                                "stateId": 12,
+                                "state": "Brandenburg",
+                                "total": 1480755,
+                                "passenger-cars": 1271356,
+                                "trucks": 109153,
+                                "tractors": 34843,
+                                "motorcycles": 46932
+                            },
+                            {
+                                "date": "01.01.1997",
+                                "stateId": 12,
+                                "state": "Brandenburg",
+                                "total": 1443589,
+                                "passenger-cars": 1248873,
+                                "trucks": 102263,
+                                "tractors": 34614,
+                                "motorcycles": 40225
+                            },
+                            {
+                                "date": "01.01.1996",
+                                "stateId": 12,
+                                "state": "Brandenburg",
+                                "total": 1399349,
+                                "passenger-cars": 1217009,
+                                "trucks": 97720,
+                                "tractors": 33521,
+                                "motorcycles": 34344
+                            }
+                        ]
+                    },
+                    {
                         "memberIdRef": "berlin",
                         "slot": "displayname",
                         "value": "Berlin"
+                    },
+                    {
+                        "memberIdRef": "berlin",
+                        "slot": "data",
+                        "value": [
+                            {
+                                "date": "01.01.2015",
+                                "stateId": 11,
+                                "state": "Berlin",
+                                "total": 1368868,
+                                "passenger-cars": 1165215,
+                                "trucks": 85664,
+                                "tractors": 5475,
+                                "motorcycles": 102129
+                            },
+                            {
+                                "date": "01.01.2014",
+                                "stateId": 11,
+                                "state": "Berlin",
+                                "total": 1352561,
+                                "passenger-cars": 1154106,
+                                "trucks": 82771,
+                                "tractors": 5080,
+                                "motorcycles": 100327
+                            },
+                            {
+                                "date": "01.01.2013",
+                                "stateId": 11,
+                                "state": "Berlin",
+                                "total": 1344876,
+                                "passenger-cars": 1149520,
+                                "trucks": 81085,
+                                "tractors": 5254,
+                                "motorcycles": 98837
+                            },
+                            {
+                                "date": "01.01.2012",
+                                "stateId": 11,
+                                "state": "Berlin",
+                                "total": 1327015,
+                                "passenger-cars": 1135704,
+                                "trucks": 78367,
+                                "tractors": 5883,
+                                "motorcycles": 97103
+                            },
+                            {
+                                "date": "01.01.2011",
+                                "stateId": 11,
+                                "state": "Berlin",
+                                "total": 1304550,
+                                "passenger-cars": 1120360,
+                                "trucks": 74545,
+                                "tractors": 4853,
+                                "motorcycles": 94985
+                            },
+                            {
+                                "date": "01.01.2010",
+                                "stateId": 11,
+                                "state": "Berlin",
+                                "total": 1287193,
+                                "passenger-cars": 1105732,
+                                "trucks": 73655,
+                                "tractors": 4341,
+                                "motorcycles": 93478
+                            },
+                            {
+                                "date": "01.01.2009",
+                                "stateId": 11,
+                                "state": "Berlin",
+                                "total": 1266879,
+                                "passenger-cars": 1088221,
+                                "trucks": 73929,
+                                "tractors": 4734,
+                                "motorcycles": 90292
+                            },
+                            {
+                                "date": "01.01.2008",
+                                "stateId": 11,
+                                "state": "Berlin",
+                                "total": 1269459,
+                                "passenger-cars": 1091164,
+                                "trucks": 75580,
+                                "tractors": 4481,
+                                "motorcycles": 88280
+                            },
+                            {
+                                "date": "01.01.2007",
+                                "stateId": 11,
+                                "state": "Berlin",
+                                "total": 1421687,
+                                "passenger-cars": 1228621,
+                                "trucks": 81925,
+                                "tractors": 4389,
+                                "motorcycles": 96000
+                            },
+                            {
+                                "date": "01.01.2006",
+                                "stateId": 11,
+                                "state": "Berlin",
+                                "total": 1416379,
+                                "passenger-cars": 1225967,
+                                "trucks": 80812,
+                                "tractors": 4450,
+                                "motorcycles": 94307
+                            },
+                            {
+                                "date": "01.01.2005",
+                                "stateId": 11,
+                                "state": "Berlin",
+                                "total": 1419217,
+                                "passenger-cars": 1218019,
+                                "trucks": 81522,
+                                "tractors": 4089,
+                                "motorcycles": 93144
+                            },
+                            {
+                                "date": "01.01.2004",
+                                "stateId": 11,
+                                "state": "Berlin",
+                                "total": 1427966,
+                                "passenger-cars": 1226299,
+                                "trucks": 82513,
+                                "tractors": 3988,
+                                "motorcycles": 92611
+                            },
+                            {
+                                "date": "01.01.2003",
+                                "stateId": 11,
+                                "state": "Berlin",
+                                "total": 1438345,
+                                "passenger-cars": 1235242,
+                                "trucks": 84925,
+                                "tractors": 3989,
+                                "motorcycles": 91146
+                            },
+                            {
+                                "date": "01.01.2002",
+                                "stateId": 11,
+                                "state": "Berlin",
+                                "total": 1440174,
+                                "passenger-cars": 1237410,
+                                "trucks": 87215,
+                                "tractors": 4035,
+                                "motorcycles": 88656
+                            },
+                            {
+                                "date": "01.01.2001",
+                                "stateId": 11,
+                                "state": "Berlin",
+                                "total": 1425278,
+                                "passenger-cars": 1225588,
+                                "trucks": 87853,
+                                "tractors": 4031,
+                                "motorcycles": 85319
+                            },
+                            {
+                                "date": "01.01.2000",
+                                "stateId": 11,
+                                "state": "Berlin",
+                                "total": 1384202,
+                                "passenger-cars": 1191994,
+                                "trucks": 86100,
+                                "tractors": 3969,
+                                "motorcycles": 80028
+                            },
+                            {
+                                "date": "01.01.1999",
+                                "stateId": 11,
+                                "state": "Berlin",
+                                "total": 1374925,
+                                "passenger-cars": 1185389,
+                                "trucks": 86435,
+                                "tractors": 4172,
+                                "motorcycles": 76322
+                            },
+                            {
+                                "date": "01.01.1998",
+                                "stateId": 11,
+                                "state": "Berlin",
+                                "total": 1372292,
+                                "passenger-cars": 1190875,
+                                "trucks": 87431,
+                                "tractors": 4556,
+                                "motorcycles": 66517
+                            },
+                            {
+                                "date": "01.01.1997",
+                                "stateId": 11,
+                                "state": "Berlin",
+                                "total": 1389310,
+                                "passenger-cars": 1207101,
+                                "trucks": 86659,
+                                "tractors": 4725,
+                                "motorcycles": 67509
+                            },
+                            {
+                                "date": "01.01.1996",
+                                "stateId": 11,
+                                "state": "Berlin",
+                                "total": 1390047,
+                                "passenger-cars": 1212572,
+                                "trucks": 85804,
+                                "tractors": 4710,
+                                "motorcycles": 63338
+                            }
+                        ]
                     },
                     {
                         "memberIdRef": "mecklenburgVorpommern",
@@ -264,9 +2764,421 @@
                         "value": "Mecklenburg-Vorpommern"
                     },
                     {
+                        "memberIdRef": "mecklenburgVorpommern",
+                        "slot": "data",
+                        "value": [
+                            {
+                                "date": "01.01.2015",
+                                "stateId": 13,
+                                "state": "Mecklenburg-Vorpommern",
+                                "total": 1002884,
+                                "passenger-cars": 825797,
+                                "trucks": 74063,
+                                "tractors": 32688,
+                                "motorcycles": 61153
+                            },
+                            {
+                                "date": "01.01.2014",
+                                "stateId": 13,
+                                "state": "Mecklenburg-Vorpommern",
+                                "total": 993121,
+                                "passenger-cars": 821255,
+                                "trucks": 72120,
+                                "tractors": 31782,
+                                "motorcycles": 59063
+                            },
+                            {
+                                "date": "01.01.2013",
+                                "stateId": 13,
+                                "state": "Mecklenburg-Vorpommern",
+                                "total": 988768,
+                                "passenger-cars": 820717,
+                                "trucks": 70940,
+                                "tractors": 30922,
+                                "motorcycles": 57420
+                            },
+                            {
+                                "date": "01.01.2012",
+                                "stateId": 13,
+                                "state": "Mecklenburg-Vorpommern",
+                                "total": 983970,
+                                "passenger-cars": 819575,
+                                "trucks": 69663,
+                                "tractors": 30083,
+                                "motorcycles": 55935
+                            },
+                            {
+                                "date": "01.01.2011",
+                                "stateId": 13,
+                                "state": "Mecklenburg-Vorpommern",
+                                "total": 974944,
+                                "passenger-cars": 815906,
+                                "trucks": 67264,
+                                "tractors": 28811,
+                                "motorcycles": 54298
+                            },
+                            {
+                                "date": "01.01.2010",
+                                "stateId": 13,
+                                "state": "Mecklenburg-Vorpommern",
+                                "total": 964337,
+                                "passenger-cars": 809762,
+                                "trucks": 65544,
+                                "tractors": 27808,
+                                "motorcycles": 52634
+                            },
+                            {
+                                "date": "01.01.2009",
+                                "stateId": 13,
+                                "state": "Mecklenburg-Vorpommern",
+                                "total": 951827,
+                                "passenger-cars": 801800,
+                                "trucks": 63967,
+                                "tractors": 27254,
+                                "motorcycles": 50373
+                            },
+                            {
+                                "date": "01.01.2008",
+                                "stateId": 13,
+                                "state": "Mecklenburg-Vorpommern",
+                                "total": 946975,
+                                "passenger-cars": 800300,
+                                "trucks": 63117,
+                                "tractors": 26488,
+                                "motorcycles": 48751
+                            },
+                            {
+                                "date": "01.01.2007",
+                                "stateId": 13,
+                                "state": "Mecklenburg-Vorpommern",
+                                "total": 1081158,
+                                "passenger-cars": 915884,
+                                "trucks": 72084,
+                                "tractors": 28885,
+                                "motorcycles": 55035
+                            },
+                            {
+                                "date": "01.01.2006",
+                                "stateId": 13,
+                                "state": "Mecklenburg-Vorpommern",
+                                "total": 1069642,
+                                "passenger-cars": 907282,
+                                "trucks": 71765,
+                                "tractors": 28230,
+                                "motorcycles": 53225
+                            },
+                            {
+                                "date": "01.01.2005",
+                                "stateId": 13,
+                                "state": "Mecklenburg-Vorpommern",
+                                "total": 1061532,
+                                "passenger-cars": 897144,
+                                "trucks": 71996,
+                                "tractors": 27800,
+                                "motorcycles": 51649
+                            },
+                            {
+                                "date": "01.01.2004",
+                                "stateId": 13,
+                                "state": "Mecklenburg-Vorpommern",
+                                "total": 1054043,
+                                "passenger-cars": 891044,
+                                "trucks": 72796,
+                                "tractors": 27627,
+                                "motorcycles": 49840
+                            },
+                            {
+                                "date": "01.01.2003",
+                                "stateId": 13,
+                                "state": "Mecklenburg-Vorpommern",
+                                "total": 1054274,
+                                "passenger-cars": 891406,
+                                "trucks": 74265,
+                                "tractors": 27952,
+                                "motorcycles": 47868
+                            },
+                            {
+                                "date": "01.01.2002",
+                                "stateId": 13,
+                                "state": "Mecklenburg-Vorpommern",
+                                "total": 1051961,
+                                "passenger-cars": 889928,
+                                "trucks": 75353,
+                                "tractors": 28360,
+                                "motorcycles": 45605
+                            },
+                            {
+                                "date": "01.01.2001",
+                                "stateId": 13,
+                                "state": "Mecklenburg-Vorpommern",
+                                "total": 1041001,
+                                "passenger-cars": 882658,
+                                "trucks": 75171,
+                                "tractors": 28289,
+                                "motorcycles": 42486
+                            },
+                            {
+                                "date": "01.01.2000",
+                                "stateId": 13,
+                                "state": "Mecklenburg-Vorpommern",
+                                "total": 1006878,
+                                "passenger-cars": 857402,
+                                "trucks": 72211,
+                                "tractors": 27632,
+                                "motorcycles": 37551
+                            },
+                            {
+                                "date": "01.01.1999",
+                                "stateId": 13,
+                                "state": "Mecklenburg-Vorpommern",
+                                "total": 986191,
+                                "passenger-cars": 843236,
+                                "trucks": 70118,
+                                "tractors": 27345,
+                                "motorcycles": 33521
+                            },
+                            {
+                                "date": "01.01.1998",
+                                "stateId": 13,
+                                "state": "Mecklenburg-Vorpommern",
+                                "total": 969757,
+                                "passenger-cars": 833968,
+                                "trucks": 68888,
+                                "tractors": 26896,
+                                "motorcycles": 28373
+                            },
+                            {
+                                "date": "01.01.1997",
+                                "stateId": 13,
+                                "state": "Mecklenburg-Vorpommern",
+                                "total": 950430,
+                                "passenger-cars": 823882,
+                                "trucks": 64991,
+                                "tractors": 26511,
+                                "motorcycles": 24064
+                            },
+                            {
+                                "date": "01.01.1996",
+                                "stateId": 13,
+                                "state": "Mecklenburg-Vorpommern",
+                                "total": 922222,
+                                "passenger-cars": 803479,
+                                "trucks": 62386,
+                                "tractors": 25566,
+                                "motorcycles": 20095
+                            }
+                        ]
+                    },
+                    {
                         "memberIdRef": "sachsen",
                         "slot": "displayname",
                         "value": "Sachsen"
+                    },
+                    {
+                        "memberIdRef": "sachsen",
+                        "slot": "data",
+                        "value": [
+                            {
+                                "date": "01.01.2015",
+                                "stateId": 14,
+                                "state": "Sachsen",
+                                "total": 2505640,
+                                "passenger-cars": 2094414,
+                                "trucks": 175398,
+                                "tractors": 57766,
+                                "motorcycles": 159232
+                            },
+                            {
+                                "date": "01.01.2014",
+                                "stateId": 14,
+                                "state": "Sachsen",
+                                "total": 2488816,
+                                "passenger-cars": 2086828,
+                                "trucks": 172732,
+                                "tractors": 56137,
+                                "motorcycles": 154450
+                            },
+                            {
+                                "date": "01.01.2013",
+                                "stateId": 14,
+                                "state": "Sachsen",
+                                "total": 2478285,
+                                "passenger-cars": 2084165,
+                                "trucks": 170492,
+                                "tractors": 54560,
+                                "motorcycles": 150560
+                            },
+                            {
+                                "date": "01.01.2012",
+                                "stateId": 14,
+                                "state": "Sachsen",
+                                "total": 2468071,
+                                "passenger-cars": 2081384,
+                                "trucks": 169029,
+                                "tractors": 53545,
+                                "motorcycles": 145827
+                            },
+                            {
+                                "date": "01.01.2011",
+                                "stateId": 14,
+                                "state": "Sachsen",
+                                "total": 2448377,
+                                "passenger-cars": 2072636,
+                                "trucks": 165073,
+                                "tractors": 51533,
+                                "motorcycles": 141014
+                            },
+                            {
+                                "date": "01.01.2010",
+                                "stateId": 14,
+                                "state": "Sachsen",
+                                "total": 2428237,
+                                "passenger-cars": 2061040,
+                                "trucks": 162891,
+                                "tractors": 49983,
+                                "motorcycles": 136179
+                            },
+                            {
+                                "date": "01.01.2009",
+                                "stateId": 14,
+                                "state": "Sachsen",
+                                "total": 2405706,
+                                "passenger-cars": 2049158,
+                                "trucks": 160083,
+                                "tractors": 48232,
+                                "motorcycles": 130270
+                            },
+                            {
+                                "date": "01.01.2008",
+                                "stateId": 14,
+                                "state": "Sachsen",
+                                "total": 2399053,
+                                "passenger-cars": 2050604,
+                                "trucks": 159176,
+                                "tractors": 46943,
+                                "motorcycles": 124473
+                            },
+                            {
+                                "date": "01.01.2007",
+                                "stateId": 14,
+                                "state": "Sachsen",
+                                "total": 2718343,
+                                "passenger-cars": 2332618,
+                                "trucks": 180347,
+                                "tractors": 49556,
+                                "motorcycles": 136292
+                            },
+                            {
+                                "date": "01.01.2006",
+                                "stateId": 14,
+                                "state": "Sachsen",
+                                "total": 2691571,
+                                "passenger-cars": 2311802,
+                                "trucks": 180176,
+                                "tractors": 47972,
+                                "motorcycles": 132041
+                            },
+                            {
+                                "date": "01.01.2005",
+                                "stateId": 14,
+                                "state": "Sachsen",
+                                "total": 2675304,
+                                "passenger-cars": 2293752,
+                                "trucks": 180482,
+                                "tractors": 46791,
+                                "motorcycles": 126980
+                            },
+                            {
+                                "date": "01.01.2004",
+                                "stateId": 14,
+                                "state": "Sachsen",
+                                "total": 2656821,
+                                "passenger-cars": 2281719,
+                                "trucks": 181190,
+                                "tractors": 45357,
+                                "motorcycles": 121567
+                            },
+                            {
+                                "date": "01.01.2003",
+                                "stateId": 14,
+                                "state": "Sachsen",
+                                "total": 2630844,
+                                "passenger-cars": 2260419,
+                                "trucks": 183291,
+                                "tractors": 44839,
+                                "motorcycles": 115632
+                            },
+                            {
+                                "date": "01.01.2002",
+                                "stateId": 14,
+                                "state": "Sachsen",
+                                "total": 2622529,
+                                "passenger-cars": 2253592,
+                                "trucks": 188537,
+                                "tractors": 44222,
+                                "motorcycles": 109875
+                            },
+                            {
+                                "date": "01.01.2001",
+                                "stateId": 14,
+                                "state": "Sachsen",
+                                "total": 2610153,
+                                "passenger-cars": 2247457,
+                                "trucks": 191115,
+                                "tractors": 43425,
+                                "motorcycles": 102304
+                            },
+                            {
+                                "date": "01.01.2000",
+                                "stateId": 14,
+                                "state": "Sachsen",
+                                "total": 2551545,
+                                "passenger-cars": 2205034,
+                                "trucks": 187415,
+                                "tractors": 41791,
+                                "motorcycles": 92424
+                            },
+                            {
+                                "date": "01.01.1999",
+                                "stateId": 14,
+                                "state": "Sachsen",
+                                "total": 2500862,
+                                "passenger-cars": 2165585,
+                                "trucks": 184216,
+                                "tractors": 41173,
+                                "motorcycles": 84931
+                            },
+                            {
+                                "date": "01.01.1998",
+                                "stateId": 14,
+                                "state": "Sachsen",
+                                "total": 2470930,
+                                "passenger-cars": 2146331,
+                                "trucks": 182978,
+                                "tractors": 41027,
+                                "motorcycles": 75736
+                            },
+                            {
+                                "date": "01.01.1997",
+                                "stateId": 14,
+                                "state": "Sachsen",
+                                "total": 2446248,
+                                "passenger-cars": 2136402,
+                                "trucks": 175853,
+                                "tractors": 40995,
+                                "motorcycles": 68899
+                            },
+                            {
+                                "date": "01.01.1996",
+                                "stateId": 14,
+                                "state": "Sachsen",
+                                "total": 2400892,
+                                "passenger-cars": 2103480,
+                                "trucks": 171027,
+                                "tractors": 40474,
+                                "motorcycles": 62166
+                            }
+                        ]
                     },
                     {
                         "memberIdRef": "sachsenAnhalt",
@@ -274,14 +3186,426 @@
                         "value": "Sachsen-Anhalt"
                     },
                     {
+                        "memberIdRef": "sachsenAnhalt",
+                        "slot": "data",
+                        "value": [
+                            {
+                                "date": "01.01.2015",
+                                "stateId": 15,
+                                "state": "Sachsen-Anhalt",
+                                "total": 1423417,
+                                "passenger-cars": 1189962,
+                                "trucks": 95488,
+                                "tractors": 40418,
+                                "motorcycles": 85230
+                            },
+                            {
+                                "date": "01.01.2014",
+                                "stateId": 15,
+                                "state": "Sachsen-Anhalt",
+                                "total": 1416469,
+                                "passenger-cars": 1188376,
+                                "trucks": 93534,
+                                "tractors": 39434,
+                                "motorcycles": 83077
+                            },
+                            {
+                                "date": "01.01.2013",
+                                "stateId": 15,
+                                "state": "Sachsen-Anhalt",
+                                "total": 1413700,
+                                "passenger-cars": 1190580,
+                                "trucks": 92075,
+                                "tractors": 38115,
+                                "motorcycles": 81167
+                            },
+                            {
+                                "date": "01.01.2012",
+                                "stateId": 15,
+                                "state": "Sachsen-Anhalt",
+                                "total": 1411183,
+                                "passenger-cars": 1191910,
+                                "trucks": 90797,
+                                "tractors": 37514,
+                                "motorcycles": 79284
+                            },
+                            {
+                                "date": "01.01.2011",
+                                "stateId": 15,
+                                "state": "Sachsen-Anhalt",
+                                "total": 1403176,
+                                "passenger-cars": 1190052,
+                                "trucks": 88008,
+                                "tractors": 36249,
+                                "motorcycles": 77235
+                            },
+                            {
+                                "date": "01.01.2010",
+                                "stateId": 15,
+                                "state": "Sachsen-Anhalt",
+                                "total": 1393631,
+                                "passenger-cars": 1185187,
+                                "trucks": 86210,
+                                "tractors": 35140,
+                                "motorcycles": 75504
+                            },
+                            {
+                                "date": "01.01.2009",
+                                "stateId": 15,
+                                "state": "Sachsen-Anhalt",
+                                "total": 1384486,
+                                "passenger-cars": 1180629,
+                                "trucks": 85067,
+                                "tractors": 34224,
+                                "motorcycles": 73120
+                            },
+                            {
+                                "date": "01.01.2008",
+                                "stateId": 15,
+                                "state": "Sachsen-Anhalt",
+                                "total": 1384383,
+                                "passenger-cars": 1184174,
+                                "trucks": 84233,
+                                "tractors": 33301,
+                                "motorcycles": 71183
+                            },
+                            {
+                                "date": "01.01.2007",
+                                "stateId": 15,
+                                "state": "Sachsen-Anhalt",
+                                "total": 1558932,
+                                "passenger-cars": 1335682,
+                                "trucks": 95611,
+                                "tractors": 35571,
+                                "motorcycles": 79327
+                            },
+                            {
+                                "date": "01.01.2006",
+                                "stateId": 15,
+                                "state": "Sachsen-Anhalt",
+                                "total": 1546437,
+                                "passenger-cars": 1326539,
+                                "trucks": 95972,
+                                "tractors": 34611,
+                                "motorcycles": 76552
+                            },
+                            {
+                                "date": "01.01.2005",
+                                "stateId": 15,
+                                "state": "Sachsen-Anhalt",
+                                "total": 1540769,
+                                "passenger-cars": 1318773,
+                                "trucks": 97305,
+                                "tractors": 34165,
+                                "motorcycles": 73641
+                            },
+                            {
+                                "date": "01.01.2004",
+                                "stateId": 15,
+                                "state": "Sachsen-Anhalt",
+                                "total": 1531416,
+                                "passenger-cars": 1312060,
+                                "trucks": 98365,
+                                "tractors": 33765,
+                                "motorcycles": 70351
+                            },
+                            {
+                                "date": "01.01.2003",
+                                "stateId": 15,
+                                "state": "Sachsen-Anhalt",
+                                "total": 1523812,
+                                "passenger-cars": 1306034,
+                                "trucks": 100096,
+                                "tractors": 33691,
+                                "motorcycles": 67223
+                            },
+                            {
+                                "date": "01.01.2002",
+                                "stateId": 15,
+                                "state": "Sachsen-Anhalt",
+                                "total": 1522925,
+                                "passenger-cars": 1305906,
+                                "trucks": 102794,
+                                "tractors": 33764,
+                                "motorcycles": 63772
+                            },
+                            {
+                                "date": "01.01.2001",
+                                "stateId": 15,
+                                "state": "Sachsen-Anhalt",
+                                "total": 1517164,
+                                "passenger-cars": 1303058,
+                                "trucks": 104251,
+                                "tractors": 33455,
+                                "motorcycles": 59799
+                            },
+                            {
+                                "date": "01.01.2000",
+                                "stateId": 15,
+                                "state": "Sachsen-Anhalt",
+                                "total": 1479225,
+                                "passenger-cars": 1275551,
+                                "trucks": 101875,
+                                "tractors": 32292,
+                                "motorcycles": 53503
+                            },
+                            {
+                                "date": "01.01.1999",
+                                "stateId": 15,
+                                "state": "Sachsen-Anhalt",
+                                "total": 1452872,
+                                "passenger-cars": 1256307,
+                                "trucks": 100314,
+                                "tractors": 31948,
+                                "motorcycles": 48302
+                            },
+                            {
+                                "date": "01.01.1998",
+                                "stateId": 15,
+                                "state": "Sachsen-Anhalt",
+                                "total": 1436439,
+                                "passenger-cars": 1247995,
+                                "trucks": 99144,
+                                "tractors": 31678,
+                                "motorcycles": 41927
+                            },
+                            {
+                                "date": "01.01.1997",
+                                "stateId": 15,
+                                "state": "Sachsen-Anhalt",
+                                "total": 1416813,
+                                "passenger-cars": 1237657,
+                                "trucks": 95093,
+                                "tractors": 31706,
+                                "motorcycles": 37275
+                            },
+                            {
+                                "date": "01.01.1996",
+                                "stateId": 15,
+                                "state": "Sachsen-Anhalt",
+                                "total": 1391017,
+                                "passenger-cars": 1218620,
+                                "trucks": 93473,
+                                "tractors": 31265,
+                                "motorcycles": 32982
+                            }
+                        ]
+                    },
+                    {
                         "memberIdRef": "thueringen",
                         "slot": "displayname",
                         "value": "Thüringen"
+                    },
+                    {
+                        "memberIdRef": "thueringen",
+                        "slot": "data",
+                        "value": [
+                            {
+                                "date": "01.01.2015",
+                                "stateId": 16,
+                                "state": "Thüringen",
+                                "total": 1421341,
+                                "passenger-cars": 1163737,
+                                "trucks": 98336,
+                                "tractors": 55342,
+                                "motorcycles": 92502
+                            },
+                            {
+                                "date": "01.01.2014",
+                                "stateId": 16,
+                                "state": "Thüringen",
+                                "total": 1413480,
+                                "passenger-cars": 1161592,
+                                "trucks": 96662,
+                                "tractors": 53703,
+                                "motorcycles": 90239
+                            },
+                            {
+                                "date": "01.01.2013",
+                                "stateId": 16,
+                                "state": "Thüringen",
+                                "total": 1409417,
+                                "passenger-cars": 1162296,
+                                "trucks": 95499,
+                                "tractors": 52010,
+                                "motorcycles": 88331
+                            },
+                            {
+                                "date": "01.01.2012",
+                                "stateId": 16,
+                                "state": "Thüringen",
+                                "total": 1403296,
+                                "passenger-cars": 1160958,
+                                "trucks": 94241,
+                                "tractors": 50485,
+                                "motorcycles": 86302
+                            },
+                            {
+                                "date": "01.01.2011",
+                                "stateId": 16,
+                                "state": "Thüringen",
+                                "total": 1391906,
+                                "passenger-cars": 1157305,
+                                "trucks": 91077,
+                                "tractors": 48072,
+                                "motorcycles": 84155
+                            },
+                            {
+                                "date": "01.01.2010",
+                                "stateId": 16,
+                                "state": "Thüringen",
+                                "total": 1380452,
+                                "passenger-cars": 1151673,
+                                "trucks": 89202,
+                                "tractors": 45983,
+                                "motorcycles": 82274
+                            },
+                            {
+                                "date": "01.01.2009",
+                                "stateId": 16,
+                                "state": "Thüringen",
+                                "total": 1368347,
+                                "passenger-cars": 1146044,
+                                "trucks": 87096,
+                                "tractors": 44235,
+                                "motorcycles": 79757
+                            },
+                            {
+                                "date": "01.01.2008",
+                                "stateId": 16,
+                                "state": "Thüringen",
+                                "total": 1364313,
+                                "passenger-cars": 1147465,
+                                "trucks": 86099,
+                                "tractors": 42437,
+                                "motorcycles": 77151
+                            },
+                            {
+                                "date": "01.01.2007",
+                                "stateId": 16,
+                                "state": "Thüringen",
+                                "total": 1545720,
+                                "passenger-cars": 1305114,
+                                "trucks": 99060,
+                                "tractors": 43811,
+                                "motorcycles": 85509
+                            },
+                            {
+                                "date": "01.01.2006",
+                                "stateId": 16,
+                                "state": "Thüringen",
+                                "total": 1528702,
+                                "passenger-cars": 1292962,
+                                "trucks": 98490,
+                                "tractors": 42125,
+                                "motorcycles": 82832
+                            },
+                            {
+                                "date": "01.01.2005",
+                                "stateId": 16,
+                                "state": "Thüringen",
+                                "total": 1518916,
+                                "passenger-cars": 1282001,
+                                "trucks": 99165,
+                                "tractors": 41037,
+                                "motorcycles": 79963
+                            },
+                            {
+                                "date": "01.01.2004",
+                                "stateId": 16,
+                                "state": "Thüringen",
+                                "total": 1507873,
+                                "passenger-cars": 1275159,
+                                "trucks": 99818,
+                                "tractors": 39761,
+                                "motorcycles": 76341
+                            },
+                            {
+                                "date": "01.01.2003",
+                                "stateId": 16,
+                                "state": "Thüringen",
+                                "total": 1497447,
+                                "passenger-cars": 1267166,
+                                "trucks": 101546,
+                                "tractors": 39246,
+                                "motorcycles": 72770
+                            },
+                            {
+                                "date": "01.01.2002",
+                                "stateId": 16,
+                                "state": "Thüringen",
+                                "total": 1491978,
+                                "passenger-cars": 1263597,
+                                "trucks": 104121,
+                                "tractors": 38593,
+                                "motorcycles": 68982
+                            },
+                            {
+                                "date": "01.01.2001",
+                                "stateId": 16,
+                                "state": "Thüringen",
+                                "total": 1479394,
+                                "passenger-cars": 1256172,
+                                "trucks": 104796,
+                                "tractors": 37704,
+                                "motorcycles": 64328
+                            },
+                            {
+                                "date": "01.01.2000",
+                                "stateId": 16,
+                                "state": "Thüringen",
+                                "total": 1439605,
+                                "passenger-cars": 1228181,
+                                "trucks": 101873,
+                                "tractors": 36234,
+                                "motorcycles": 57393
+                            },
+                            {
+                                "date": "01.01.1999",
+                                "stateId": 16,
+                                "state": "Thüringen",
+                                "total": 1409130,
+                                "passenger-cars": 1206714,
+                                "trucks": 99510,
+                                "tractors": 35376,
+                                "motorcycles": 51675
+                            },
+                            {
+                                "date": "01.01.1998",
+                                "stateId": 16,
+                                "state": "Thüringen",
+                                "total": 1387030,
+                                "passenger-cars": 1194162,
+                                "trucks": 97902,
+                                "tractors": 34555,
+                                "motorcycles": 44787
+                            },
+                            {
+                                "date": "01.01.1997",
+                                "stateId": 16,
+                                "state": "Thüringen",
+                                "total": 1368687,
+                                "passenger-cars": 1185893,
+                                "trucks": 94298,
+                                "tractors": 33890,
+                                "motorcycles": 39640
+                            },
+                            {
+                                "date": "01.01.1996",
+                                "stateId": 16,
+                                "state": "Thüringen",
+                                "total": 1347128,
+                                "passenger-cars": 1171281,
+                                "trucks": 92802,
+                                "tractors": 33069,
+                                "motorcycles": 35379
+                            }
+                        ]
                     }
                 ]
             },
             {
-                "artifactId": "state-car-registration-data-dragable",
+                "artifactId": "state-car-registration-data-draggable",
                 "description": "This is a cubbles-compound-component.",
                 "runnables": [
                     {
@@ -294,11 +3618,11 @@
                     {
                         "endpointId": "main",
                         "resources": [
-                            "css/state-car-registration-data-dragable.css"
+                            "css/state-car-registration-data-draggable.css"
                         ],
                         "dependencies": [
                             "this/state-car-registration-data/main",
-                            "this/dragable-maker/main"
+                            "this/draggable-maker/main"
                         ]
                     }
                 ],
@@ -321,8 +3645,8 @@
                 ],
                 "members": [
                     {
-                        "memberId": "dragableMaker",
-                        "componentId": "this/dragable-maker"
+                        "memberId": "draggableMaker",
+                        "componentId": "this/draggable-maker"
                     },
                     {
                         "memberId": "data",
@@ -363,13 +3687,105 @@
                 ],
                 "inits": [
                     {
-                        "memberIdRef":"dragableMaker",
-                        "slot": "dragableElement",
+                        "memberIdRef": "draggableMaker",
+                        "slot": "draggableElement",
                         "value": "state-car-registration-data .state"
                     }
                 ]
+            },
+            {
+                "artifactId": "statistic-modul-bar-chart",
+                "description": "This is a cubbles-compound-component.",
+                "runnables": [
+                    {
+                        "name": "demo",
+                        "path": "/demo/index.html",
+                        "description": "Demo app..."
+                    }
+                ],
+                "endpoints": [
+                    {
+                        "endpointId": "main",
+                        "resources": [
+                            "css/statistic-modul-bar-chart.css"
+                        ],
+                        "dependencies": [
+                            "com.incowia.lib.chart-library@0.1.0-SNAPSHOT/bar-chart/main",
+                            "this/parent-dropzone/main",
+                            "this/connection-functions/main"
+                        ]
+                    }
+                ],
+                "slots": [
+                    {
+                        "slotId": "data",
+                        "type": "object",
+                        "direction": [
+                            "input"
+                        ]
+                    }
+                ],
+                "members": [
+                    {
+                        "memberId": "parentDropzone",
+                        "componentId": "this/parent-dropzone"
+                    },
+                    {
+                        "memberId": "barChart",
+                        "componentId": "com.incowia.lib.chart-library@0.1.0-SNAPSHOT/bar-chart"
+                    }
+                ],
+                "connections": [
+                    {
+                        "connectionId": "chartData",
+                        "source": {
+                            "slot": "data"
+                        },
+                        "destination": {
+                            "memberIdRef": "barChart",
+                            "slot": "dataColumns"
+                        },
+                        "hookFunction": "car_registration_statistic.convertDataForBarChart"
+                    },
+                    {
+                        "connectionId": "chartLabel",
+                        "source": {
+                            "slot": "data"
+                        },
+                        "destination": {
+                            "memberIdRef": "barChart",
+                            "slot": "xLabels"
+                        },
+                        "hookFunction": "car_registration_statistic.convertDataForBarChartLabels"
+                    }
+                ],
+                "inits": []
             }
         ],
-        "utilities": []
+        "utilities": [
+            {
+                "artifactId": "connection-functions",
+                "description": "",
+                "endpoints": [
+                    {
+                        "endpointId": "main",
+                        "resources": [
+                            "js/connectionFunction.js"
+                        ],
+                        "dependencies": []
+                    },
+                    {
+                        "endpointId": "html-import",
+                        "description": "This is recommended for you use with webcomponents.",
+                        "resources": [
+                            "html-import.html"
+                        ],
+                        "dependencies": [
+                            "lodash-3.10.1@1.0.1/lodash/html-import"
+                        ]
+                    }
+                ]
+            }
+        ]
     }
 }

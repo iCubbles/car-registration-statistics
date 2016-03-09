@@ -10,14 +10,14 @@
      * slot 'a': this.getA(); | this.setA(value)
      */
     CubxPolymer({
-        is: 'dragable-maker',
+        is: 'draggable-maker',
 
         cubxReady: function() {
 
-            var dragableElement = this.root.parentNode.querySelector(this.getDragableElement());
-            dragableElement.setAttribute("draggable","true");
-            dragableElement.addEventListener('dragstart', this.handleDragStart);
-            dragableElement.addEventListener('dragend', this.handleDragEnd);
+            var draggableElement = this.root.parentNode.querySelector(this.getDraggableElement());
+            draggableElement.setAttribute("draggable","true");
+            draggableElement.addEventListener('dragstart', this.handleDragStart);
+            draggableElement.addEventListener('dragend', this.handleDragEnd);
 
             // set value-attribute of element with id='slota' to the initial value of slot 'a'
         },
@@ -26,7 +26,8 @@
             this.style.opacity = '0.4';
             var host = e.target.parentNode;
             //console.log('transportable-element:dragstart:host', host);
-            var runtimeId = host.getAttribute('runtime-id');
+            var runtimeId = host.parentNode.getAttribute('runtime-id');
+            console.log('handleDragStart -> runtimeId', runtimeId);
             e.dataTransfer.setData('runtimeId', runtimeId);
             e.dataTransfer.effectAllowed = 'move';
         },
