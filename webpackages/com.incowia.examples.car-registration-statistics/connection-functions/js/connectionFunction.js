@@ -25,6 +25,7 @@ window.car_registration_statistic = {
         datasetList.push(datasetTrucks);
         datasetList.push(datasetTractors);
         datasetList.push(datasetMotorcycles);
+        //console.log('convertDataForChart -> new Data', datasetList);
         next(datasetList);
     },
     convertDataForChartLabels: function(value, next) {

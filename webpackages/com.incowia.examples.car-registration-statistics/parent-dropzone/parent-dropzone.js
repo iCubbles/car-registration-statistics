@@ -93,6 +93,10 @@
                 if (e.stopPropagation) {
                     e.stopPropagation(); // stops the browser from redirecting.
                     var runtimeId = e.dataTransfer.getData('runtimeId');
+                    if (!runtimeId) {
+                        console.log('Dragged element runtimeId not found');
+                        return;
+                    }
                     var me = e.target;
 
                     var draggedEl = elementFindByAttributeValue('runtime-id', runtimeId);

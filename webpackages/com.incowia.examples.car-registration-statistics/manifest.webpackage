@@ -12,7 +12,19 @@
     "keywords": [],
     "man": [],
     "artifacts": {
-        "apps": [],
+        "apps": [
+            {
+                "artifactId": "car-registration-statistics",
+                "description": "",
+                "runnables": [
+                    {
+                        "name": "Application",
+                        "path": "/index.html",
+                        "description": "Federal state car-registration demo for demonstrate the feature \"direct execution\"."
+                    }
+                ]
+            }
+        ],
         "elementaryComponents": [
             {
                 "artifactId": "state-car-registration-data",
@@ -3694,7 +3706,8 @@
                         ],
                         "dependencies": [
                             "this/state-car-registration-data/main",
-                            "this/draggable-maker/main"
+                            "this/draggable-maker/main",
+                            "this/utility/main"
                         ]
                     }
                 ],
@@ -4334,6 +4347,27 @@
                         "dependencies": [
                             "lodash-3.10.1@1.0.1/lodash/html-import"
                         ]
+                    }
+                ]
+            },
+            {
+                "artifactId": "utility",
+                "description": "",
+                "endpoints": [
+                    {
+                        "endpointId": "main",
+                        "resources": [
+                            "js/util.js"
+                        ],
+                        "dependencies": []
+                    },
+                    {
+                        "endpointId": "html-import",
+                        "description": "This is recommended for you use with webcomponents.",
+                        "resources": [
+                            "html-import.html"
+                        ],
+                        "dependencies": []
                     }
                 ]
             }

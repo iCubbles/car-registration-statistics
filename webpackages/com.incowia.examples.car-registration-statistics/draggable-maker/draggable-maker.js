@@ -15,7 +15,7 @@
         cubxReady: function() {
 
             var draggableElement = this.root.parentNode.querySelector(this.getDraggableElement());
-            draggableElement.setAttribute("draggable", "true");
+            draggableElement.setAttribute('draggable', 'true');
             draggableElement.addEventListener('dragstart', this.handleDragStart);
             draggableElement.addEventListener('dragend', this.handleDragEnd);
 
@@ -23,14 +23,30 @@
         },
         handleDragStart: function(e) {
             this.style.opacity = '0.4';
-            var host = e.target.parentNode;
+            function findParentCompound(element) {
+                if (element.parentNode.hasAttribute('cubx-core-crc')) {
+                    return null;
+                }
+                if (element.parentNode.isCompoundComponent) {
+                    return element.parentNode;
+                } else {
+                    return findParentCompound(element.parentNode);
+                }
+            }
+
+            var parentCompound = findParentCompound(e.target);
+            if (parentCompound) {
+
+                var runtimeId = parentCompound.getAttribute('runtime-id');
+                e.dataTransfer.setData('runtimeId', runtimeId);
+            }
+            //var host = e.target.parentNode;
             //console.log('transportable-element:dragstart:host', host);
-            var runtimeId = host.parentNode.getAttribute('runtime-id');
-            e.dataTransfer.setData('runtimeId', runtimeId);
             e.dataTransfer.effectAllowed = 'move';
         },
         handleDragEnd: function(e) {
             e.target.style.opacity = '1';
         }
+
     });
 }());
