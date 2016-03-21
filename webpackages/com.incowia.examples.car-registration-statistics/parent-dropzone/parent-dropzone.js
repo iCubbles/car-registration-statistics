@@ -88,7 +88,15 @@
       parentElem.handleDrop = function (e) {
         if (e.stopPropagation) {
           e.stopPropagation(); // stops the browser from redirecting.
-          var runtimeId = e.dataTransfer.getData('runtimeId');
+          var msie = window.navigator.userAgent.indexOf('MSIE ');       // Detect IE
+          var trident = window.navigator.userAgent.indexOf('Trident/'); // Detect IE 11
+          var edge = window.navigator.userAgent.indexOf('Edge'); // Detect Edge
+          var runtimeId;
+          if (msie > 0 || trident > 0 || edge > 0) {
+            runtimeId = e.dataTransfer.getData('Text');
+          } else {
+            runtimeId = e.dataTransfer.getData('runtimeId');
+          }
           if (!runtimeId) {
             console.log('Dragged element runtimeId not found');
             return;

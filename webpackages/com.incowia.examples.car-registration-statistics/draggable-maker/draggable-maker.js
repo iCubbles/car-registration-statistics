@@ -36,7 +36,15 @@
       var parentCompound = findParentCompound(e.target);
       if (parentCompound) {
         var runtimeId = parentCompound.getAttribute('runtime-id');
-        e.dataTransfer.setData('runtimeId', runtimeId);
+        var msie = window.navigator.userAgent.indexOf('MSIE ');       // Detect IE
+        var trident = window.navigator.userAgent.indexOf('Trident/'); // Detect IE 11
+        var edge = window.navigator.userAgent.indexOf('Edge'); // Detect Edge
+
+        if (msie > 0 || trident > 0 || edge > 0) {
+          e.dataTransfer.setData('Text', runtimeId);
+        } else {
+          e.dataTransfer.setData('runtimeId', runtimeId);
+        }
       }
       // var host = e.target.parentNode;
       // console.log('transportable-element:dragstart:host', host);
