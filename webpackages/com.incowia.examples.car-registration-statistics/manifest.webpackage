@@ -69,70 +69,6 @@
                 ]
             },
             {
-                "artifactId": "draggable-maker",
-                "description": "This is an elementary-component based on Polymer.",
-                "runnables": [
-                    {
-                        "name": "demo",
-                        "path": "/demo/index.html",
-                        "description": "Demo app..."
-                    }
-                ],
-                "endpoints": [
-                    {
-                        "endpointId": "main",
-                        "description": "This is recommended for you use with webcomponents.",
-                        "resources": [
-                            "draggable-maker.html"
-                        ],
-                        "dependencies": [
-                            "cubx.core.rte@1.8.0/cubxpolymer/main"
-                        ]
-                    }
-                ],
-                "slots": [
-                    {
-                        "slotId": "draggableElement",
-                        "type": "string",
-                        "direction": [
-                            "input"
-                        ]
-                    }
-                ]
-            },
-            {
-                "artifactId": "parent-dropzone",
-                "description": "This is an elementary-component based on Polymer.",
-                "runnables": [
-                    {
-                        "name": "demo",
-                        "path": "/demo/index.html",
-                        "description": "Demo app..."
-                    }
-                ],
-                "endpoints": [
-                    {
-                        "endpointId": "main",
-                        "description": "This is recommended for you use with webcomponents.",
-                        "resources": [
-                            "parent-dropzone.html"
-                        ],
-                        "dependencies": [
-                            "cubx.core.rte@1.8.0/cubxpolymer/main"
-                        ]
-                    }
-                ],
-                "slots": [
-                    {
-                        "slotId": "connectionDef",
-                        "type": "array",
-                        "direction": [
-                            "input"
-                        ]
-                    }
-                ]
-            },
-            {
                 "artifactId": "chart-title",
                 "description": "This is an elementary-component based on Polymer.",
                 "runnables": [
@@ -3706,7 +3642,7 @@
                         ],
                         "dependencies": [
                             "this/state-car-registration-data/main",
-                            "this/draggable-maker/main",
+                            "drag-and-drop-helper@0.1.0-SNAPSHOT/draggable-maker/main",
                             "this/utility/main"
                         ]
                     }
@@ -3732,7 +3668,7 @@
                 "members": [
                     {
                         "memberId": "draggableMaker",
-                        "componentId": "this/draggable-maker"
+                        "componentId": "drag-and-drop-helper@0.1.0-SNAPSHOT/draggable-maker"
                     },
                     {
                         "memberId": "data",
@@ -3784,7 +3720,7 @@
                 "inits": [
                     {
                         "memberIdRef": "draggableMaker",
-                        "slot": "draggableElement",
+                        "slot": "draggableElementSelector",
                         "value": "state-car-registration-data .state"
                     }
                 ]
@@ -3808,7 +3744,7 @@
                         "dependencies": [
                             "this/chart-title/main",
                             "com.incowia.lib.chart-library@0.1.0-SNAPSHOT/bar-chart/main",
-                            "this/parent-dropzone/main",
+                            "drag-and-drop-helper@0.1.0-SNAPSHOT/parent-dropzone/main",
                             "this/connection-functions/main"
                         ]
                     }
@@ -3837,7 +3773,7 @@
                     },
                     {
                         "memberId": "parentDropzone",
-                        "componentId": "this/parent-dropzone"
+                        "componentId": "drag-and-drop-helper@0.1.0-SNAPSHOT/parent-dropzone"
                     },
                     {
                         "memberId": "barChart",
@@ -3948,7 +3884,7 @@
                         "dependencies": [
                             "this/chart-title/main",
                             "com.incowia.lib.chart-library@0.1.0-SNAPSHOT/line-chart/main",
-                            "this/parent-dropzone/main",
+                            "drag-and-drop-helper@0.1.0-SNAPSHOT/parent-dropzone/main",
                             "this/connection-functions/main"
                         ]
                     }
@@ -3977,7 +3913,7 @@
                     },
                     {
                         "memberId": "parentDropzone",
-                        "componentId": "this/parent-dropzone"
+                        "componentId": "drag-and-drop-helper@0.1.0-SNAPSHOT/parent-dropzone"
                     },
                     {
                         "memberId": "lineChart",
@@ -4088,7 +4024,7 @@
                         "dependencies": [
                             "this/chart-title/main",
                             "com.incowia.lib.chart-library@0.1.0-SNAPSHOT/step-chart/main",
-                            "this/parent-dropzone/main",
+                            "drag-and-drop-helper@0.1.0-SNAPSHOT/parent-dropzone/main",
                             "this/connection-functions/main"
                         ]
                     }
@@ -4117,7 +4053,7 @@
                     },
                     {
                         "memberId": "parentDropzone",
-                        "componentId": "this/parent-dropzone"
+                        "componentId": "drag-and-drop-helper@0.1.0-SNAPSHOT/parent-dropzone"
                     },
                     {
                         "memberId": "stepChart",
@@ -4228,7 +4164,7 @@
                         "dependencies": [
                             "this/chart-title/main",
                             "com.incowia.lib.chart-library@0.1.0-SNAPSHOT/pie-chart/main",
-                            "this/parent-dropzone/main",
+                            "drag-and-drop-helper@0.1.0-SNAPSHOT/parent-dropzone/main",
                             "this/connection-functions/main"
                         ]
                     }
@@ -4257,7 +4193,7 @@
                     },
                     {
                         "memberId": "parentDropzone",
-                        "componentId": "this/parent-dropzone"
+                        "componentId": "drag-and-drop-helper@0.1.0-SNAPSHOT/parent-dropzone"
                     },
                     {
                         "memberId": "pieChart",
