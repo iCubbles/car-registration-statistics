@@ -1,7 +1,7 @@
 {
     "name": "car-registration-statistics",
     "groupId": "com.incowia.examples",
-    "version": "0.4.0-SNAPSHOT",
+    "version": "0.4.0",
     "modelVersion": "8.3.0",
     "docType": "webpackage",
     "author": {
@@ -3642,7 +3642,7 @@
                         ],
                         "dependencies": [
                             "this/state-car-registration-data/main",
-                            "drag-and-drop-helper@0.1.0-SNAPSHOT/draggable-maker/main",
+                            "drag-and-drop-helper@0.1.0/draggable-maker/main",
                             "this/utility/main"
                         ]
                     }
@@ -3668,7 +3668,7 @@
                 "members": [
                     {
                         "memberId": "draggableMaker",
-                        "componentId": "drag-and-drop-helper@0.1.0-SNAPSHOT/draggable-maker"
+                        "componentId": "drag-and-drop-helper@0.1.0/draggable-maker"
                     },
                     {
                         "memberId": "data",
@@ -3744,7 +3744,7 @@
                         "dependencies": [
                             "this/chart-title/main",
                             "com.incowia.lib.chart-library@0.1.0-SNAPSHOT/bar-chart/main",
-                            "drag-and-drop-helper@0.1.0-SNAPSHOT/parent-dropzone/main",
+                            "drag-and-drop-helper@0.1.0/parent-dropzone/main",
                             "this/connection-functions/main"
                         ]
                     }
@@ -3773,7 +3773,7 @@
                     },
                     {
                         "memberId": "parentDropzone",
-                        "componentId": "drag-and-drop-helper@0.1.0-SNAPSHOT/parent-dropzone"
+                        "componentId": "drag-and-drop-helper@0.1.0/parent-dropzone"
                     },
                     {
                         "memberId": "barChart",
@@ -3884,7 +3884,7 @@
                         "dependencies": [
                             "this/chart-title/main",
                             "com.incowia.lib.chart-library@0.1.0-SNAPSHOT/line-chart/main",
-                            "drag-and-drop-helper@0.1.0-SNAPSHOT/parent-dropzone/main",
+                            "drag-and-drop-helper@0.1.0/parent-dropzone/main",
                             "this/connection-functions/main"
                         ]
                     }
@@ -3913,7 +3913,7 @@
                     },
                     {
                         "memberId": "parentDropzone",
-                        "componentId": "drag-and-drop-helper@0.1.0-SNAPSHOT/parent-dropzone"
+                        "componentId": "drag-and-drop-helper@0.1.0/parent-dropzone"
                     },
                     {
                         "memberId": "lineChart",
@@ -4024,7 +4024,7 @@
                         "dependencies": [
                             "this/chart-title/main",
                             "com.incowia.lib.chart-library@0.1.0-SNAPSHOT/step-chart/main",
-                            "drag-and-drop-helper@0.1.0-SNAPSHOT/parent-dropzone/main",
+                            "drag-and-drop-helper@0.1.0/parent-dropzone/main",
                             "this/connection-functions/main"
                         ]
                     }
@@ -4053,7 +4053,7 @@
                     },
                     {
                         "memberId": "parentDropzone",
-                        "componentId": "drag-and-drop-helper@0.1.0-SNAPSHOT/parent-dropzone"
+                        "componentId": "drag-and-drop-helper@0.1.0/parent-dropzone"
                     },
                     {
                         "memberId": "stepChart",
@@ -4164,7 +4164,7 @@
                         "dependencies": [
                             "this/chart-title/main",
                             "com.incowia.lib.chart-library@0.1.0-SNAPSHOT/pie-chart/main",
-                            "drag-and-drop-helper@0.1.0-SNAPSHOT/parent-dropzone/main",
+                            "drag-and-drop-helper@0.1.0/parent-dropzone/main",
                             "this/connection-functions/main"
                         ]
                     }
@@ -4193,7 +4193,7 @@
                     },
                     {
                         "memberId": "parentDropzone",
-                        "componentId": "drag-and-drop-helper@0.1.0-SNAPSHOT/parent-dropzone"
+                        "componentId": "drag-and-drop-helper@0.1.0/parent-dropzone"
                     },
                     {
                         "memberId": "pieChart",
